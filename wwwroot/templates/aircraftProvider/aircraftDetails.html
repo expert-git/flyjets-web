@@ -1,0 +1,436 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="fleetDashboard fleetDashboard--new fleetDashboard--provider">
+        <div class="fleetDashboard__title">New aircraft</div>
+        <div class="fleetDashboard__form fleetDashboard__form--new">
+            <form class="form form--fleet js-fleetForm" action="" data-href="/json/test.json" data-action="fleetForm" method="post" id="fleetForm" onsubmit="return false;">
+                <div class="form__labelGroup form__labelGroup--1">
+                    <div class="fleetDashboard__photos">
+                        <div class="fleetDashboard__photos-title">Upload photos</div>
+                        <div class="fleetDashboard__photos-left">
+                            <div class="fleetDashboard__photos-slider js-aircraftPhotos">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" data-id="1">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="2">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="3">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="4">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="5">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="6">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" data-id="7">
+                                            <div class="fleetDashboard__photos-slider-item">
+                                                <a class="fleetDashboard__photos-slider-img" data-fancybox="aircraft-gallery">
+                                                    <div class="fleetDashboard__photos-slider-img-back">
+                                                        <span class="fleetDashboard__photos-slider-img-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                    </div>
+                                                </a>
+                                                <label class="form__file form__file--photos js-file-img">
+                                                    <input type="file" name="photo" accept="image/*">
+                                                    <div class="form__file-icon">
+                                                        <svg class="icon__photo-camera" width="18px" height="18px">
+                                                            <use xlink:href="#photo-camera"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="form__file-caption js-file-name">Upload photo</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="fleetDashboard__photos-right">
+                            <div class="fleetDashboard__photos-subtitle">Photo requirements:</div>
+                            <div class="fleetDashboard__photos-list">
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="1" data-name="Exterior - In Air" data-required="">
+                                    Aircraft Photo Two: <b>Exterior - in air</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="2" data-name="Exterior - Ground" data-required="">
+                                    Aircraft Photo One: <b>Exterior - ground</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="3" data-name="Interior - Passenger Cabin - Wide" data-required="">
+                                    Aircraft Photo Three: <b>Interior - Passenger Cabin - wide</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="4" data-name="Interior - Cockpit" data-required="">
+                                    Aircraft Photo Four: <b>Interior - Cockpit</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="5" data-name="Interior Floorplan" data-required="">
+                                    Aircraft Photo Five: <b>Interior Floorplan</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="6" data-name="Interior Three">
+                                    Aircraft Photo Six(optional): <b>Interior Three</b>
+                                </div>
+                                <div class="fleetDashboard__photos-list-item js-aircraftPhotos-caption" data-id="7" data-name="Exterior Three">
+                                    Aircraft Photo Seven(optional): <b>Exterior Three</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--2">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Tail number:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="tailNumber" id="tailNumber" maxlength="10" autocomplete="off" required>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--select">
+                        <div class="form__caption">Aircraft type</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="aircraftsTypes" id="aircraftsTypes">
+                            <input type="hidden" id="aircraftsTypeId" />
+                        </div>
+                    </label>
+                    <label class="form__label form__label--select">
+                        <div class="form__caption">Aircraft model</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-typeahead" type="text" name="aircraftsModels" id="aircraftsModels" placeholder="" required>
+                            <input type="hidden" id="aircraftsModelId" />
+                        </div>
+                    </label>
+                    <label class="form__label form__label--select">
+                        <div class="form__caption">Home base:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-typeahead" type="text" name="homebase" id="homebase" placeholder="" required>
+                            <input type="hidden" id="homebaseId" />
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--4">
+                    <label class="form__label form__label--text">
+                        <div class="form__caption">Argus safety rating:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="argusSafetyRating" maxlength="100" id="argusSafetyRating" placeholder="" autocomplete="off">
+                        </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                        <div class="form__caption">Wyvern safety rating:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="wyvernSafetyRating" maxlength="100" id="wyvernSafetyRating" placeholder="" autocomplete="off">
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Year of manufacture:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-digitsOnly" type="text" name="yearOfMan" id="yearOfMan" data-mask="0000" minlength="4" maxlength="4" placeholder="" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--5">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">
+                            Last interior
+                            <br>refurbish:
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-digitsOnly" type="text" name="lastIntRefurbish" id="lastIntRefurbish" placeholder="" data-mask="0000" minlength="4" maxlength="4" autocomplete="off">
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">
+                            Last exterior
+                            <br>refurbish:
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-digitsOnly" type="text" name="lastExtRefurbish" id="lastExtRefurbish" placeholder="" data-mask="0000" minlength="4" maxlength="4" autocomplete="off">
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">
+                            Maximum
+                            <br>passengers:
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-digitsOnly" type="text" name="maxPax" id="maxPax" maxlength="3" placeholder="" data-mask="000" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--6">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Hours flown:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-digitsOnly" type="text" name="hoursFlown" id="hoursFlown" data-mask="000000" maxlength="6" placeholder="" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--7">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Speed (nautical miles/hour):</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-numberOnly" type="text" name="speed" id="speed" maxlength="4" placeholder="" autocomplete="off" required>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Range (nautical miles):</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-numberOnly" type="text" name="range" id="range" maxlength="5" placeholder="" autocomplete="off" required>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Cargo capability (lbs.):</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-numberOnly" type="text" name="cargoCapability" id="cargoCapability" maxlength="5" placeholder="" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--8">
+                    <div class="form__radioGroup">
+                        <div class="form__caption">Wi-Fi onboard?</div>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="wifi" value="true" id="wifi-yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="wifi" value="false" id="wifi-no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                    <div class="form__radioGroup js-tooltip-box">
+                        <div class="form__caption">Television onboard?</div>
+                        <div class="form__tooltip js-tooltip">
+                            <label class="form__label form__label--number">
+                                <div class="form__caption">Number of Televisions Onboard:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-digitsOnly" type="text" name="tvCount" maxlength="3" id="tvCount" autocomplete="off">
+                                </div>
+                            </label>
+                        </div>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio js-tooltip-input" type="radio" name="tv" value="yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="tv" value="no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__title">Aircraft Documents</div>
+                <div class="form__labelGroup form__labelGroup--3">
+                    <div class="form__label form__label--file js-file">
+                        <div class="form__caption">Airworthiness certificate</div>
+                        <label class="form__file">
+                            <div class="form__file-button-wr js-file-button">
+                                <button class="form__file-button" type="button">
+                                    <span class="form__file-button-icon">
+                                        <svg class="icon__cloud" width="23px" height="23px">
+                                            <use xlink:href="#cloud"></use>
+                                        </svg>
+                                    </span><span class="form__file-button-text">Upload</span>
+                                </button>
+                            </div>
+                            <div class="form__file-preview-wr js-file-preview">
+                                <div class="form__file-preview">
+                                    <a class="form__file-preview-remove js-file-remove" href="#questionPopup">
+                                        <svg class="icon__close" width="17px" height="17px">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="form__file-preview-icon">
+                                        <svg class="icon__file" width="60px" height="60px">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-caption">
+                                        <div class="form__file-preview-title js-file-caption">License.jpg</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="file" name="airworthiness" id="airwothinessCertificate" multiple accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </label>
+                    </div>
+                    <div class="form__label form__label--file js-file">
+                        <div class="form__caption">Insurance documents</div>
+                        <label class="form__file">
+                            <div class="form__file-button-wr js-file-button">
+                                <button class="form__file-button" type="button">
+                                    <span class="form__file-button-icon">
+                                        <svg class="icon__cloud" width="23px" height="23px">
+                                            <use xlink:href="#cloud"></use>
+                                        </svg>
+                                    </span><span class="form__file-button-text">Upload</span>
+                                </button>
+                            </div>
+                            <div class="form__file-preview-wr js-file-preview">
+                                <div class="form__file-preview">
+                                    <a class="form__file-preview-remove js-file-remove" href="#questionPopup">
+                                        <svg class="icon__close" width="17px" height="17px">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="form__file-preview-icon">
+                                        <svg class="icon__file" width="60px" height="60px">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-caption">
+                                        <div class="form__file-preview-title js-file-caption">License.jpg</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="file" name="insurance" id="insuranceDocuments" multiple accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--12">
+                    <label class="form__label form__label--price price">
+                        <div class="form__title">Price per hour:</div>
+                        <!--<div class="form__subtitle">May be altered on a per-trip basis</div>-->
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="pricePerHour" id="pricePerHour" placeholder="" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--8">
+                    <div class="form__radioGroup">
+                        <div class="form__caption">Bookable Demo?</div>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="bookableDemo" value="true" id="bookableDemo-yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="bookableDemo" value="false" id="bookableDemo-no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--13">
+                    <!--<div class="form__checkboxGroup">
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="sell" value="charter aircraft"><i class="form__checkbox-icon"></i><span class="form__checkbox-caption">Sell as charter aircraft</span>
+                        </label>
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="sell" value="charter seats"><i class="form__checkbox-icon"></i><span class="form__checkbox-caption">Sell as charter seats</span>
+                        </label>
+                    </div>-->
+                    <div class="form__label form__label--button">
+                        <div class="spinner">
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                        </div>
+                        <button class="form__button  form__button--submit" type="button" id="saveAircraft">
+                            <span class="text">Save aircraft</span>
+                        </button>
+                    </div>
+                    <div class="form__label form__label--button">
+                        <div class="spinner">
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                        </div>
+                        <button class="form__button  form__button--submit" type="button" id="removeAircraft">
+                            <span class="text">Remove aircraft</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

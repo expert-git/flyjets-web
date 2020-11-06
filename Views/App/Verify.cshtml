@@ -1,0 +1,32 @@
+@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FLYJETS</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        (function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement);
+
+        var apiBaseUrl = "@ViewData["ApiBaseUrl"]";
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTtMUY96FwdCihu1z3Px4rEZQ6uKabQRU&amp;&amp;language=en" async defer></script>
+</head>
+  <h1 id="verification-message"></h1>
+  <script src="/js/separate-js/jquery-3.2.1.min.js"></script>
+  <script src="/js/verify.js"></script>
+</html>

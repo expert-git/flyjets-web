@@ -1,0 +1,293 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="paymentDashboard js-tabBox paymentDashboard--flyer">
+        <div class="paymentDashboard__nav">
+            <div class="paymentDashboard__nav-item js-tabNavItem active" data-id="pay">Pay</div>
+            <div class="paymentDashboard__nav-item js-tabNavItem" data-id="getPayment">Get payment</div>
+        </div>
+        <div class="paymentDashboard__content">
+            <div class="paymentDashboard__content-item js-tabContentItem active" data-id="pay">
+                <div class="paymentDashboard__inner">
+                    <div class="paymentDashboard__left">
+                        <div class="paymentDashboard__title">Credit or debit card information</div>
+                        <form class="form paymentDashboard__list" action="" method="post" data-href="/" data-action="payCardInfo" id="payCardInfo" onsubmit="return false;">
+                            
+                        </form>
+                        <div class="paymentDashboard__add js-acc-item">
+                            <div class="paymentDashboard__add-header js-acc-title">
+                                <span class="paymentDashboard__add-header-text">Add New Credit or Debit Card Payment Method</span><span class="paymentDashboard__add-header-icon">
+                                    <span class="paymentDashboard__add-header-icon-minus">
+                                        <svg class="icon__minus" width="512px" height="512px">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </span><span class="paymentDashboard__add-header-icon-plus">
+                                        <svg class="icon__add" width="512px" height="512px">
+                                            <use xlink:href="#add"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="paymentDashboard__add-content js-acc-content">
+                                <div class="paymentDashboard__form">
+                                    <form class="form form--addNewCardMethod js-addNewCardMethod" action="" method="post" data-href="/" data-action="payAddNewCardMethod" id="payAddNewCardMethod" onsubmit="return false;">
+                                        <div class="form__radioGroup">
+                                            <label class="form__label form__label--radio checked">
+                                                <input class="form__radio" type="radio" name="type-card" checked="checked" value="credit"><span class="form__radio-box">Card</span>
+                                            </label>
+                                            <!--<label class="form__label form__label--radio">
+                                                <input class="form__radio" type="radio" name="type-card" value="debit"><span class="form__radio-box">Debit</span>
+                                            </label>-->
+                                        </div>
+                                        <div class="form__textGroup">
+                                            <label class="form__label form__label--text">
+                                                <div class="form__caption">Card number:</div>
+                                                <div class="form__field-wrapper">
+                                                    <input class="form__field js-numberOnly" type="text" name="ccNumber" data-mask="0000-0000-0000-0000" minlength="19" autocomplete="off" placeholder="" required>
+                                                </div>
+                                            </label>
+                                            <label class="form__label form__label--code">
+                                                <div class="form__caption">Exp Month:</div>
+                                                <div class="form__field-wrapper">
+                                                    <input class="form__field js-numberOnly" type="text" name="ccExpMonth" data-mask="00" placeholder="" minlength="1" maxlength="2" autocomplete="off" required>
+                                                </div>
+                                            </label>
+                                            <label class="form__label form__label--code">
+                                                <div class="form__caption">Exp Year:</div>
+                                                <div class="form__field-wrapper">
+                                                    <input class="form__field js-numberOnly" type="text" name="ccExpYear" data-mask="0000" placeholder="" minlength="2" maxlength="4" autocomplete="off" required>
+                                                </div>
+                                            </label>
+                                            <label class="form__label form__label--code">
+                                                <div class="form__caption">CVV:</div>
+                                                <div class="form__field-wrapper">
+                                                    <input class="form__field js-numberOnly" type="text" name="ccCvv" data-mask="000" placeholder="" minlength="3" autocomplete="off" required>
+                                                </div>
+                                            </label>
+                                            <div class="form__label form__label--button">
+                                                <div class="spinner">
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                    <div class="spinner__item"></div>
+                                                </div>
+                                                <button class="form__button" type="button" id="addCreditCard">
+                                                    <span class="text">Save</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paymentDashboard__right">
+                        <div class="paymentDashboard__title">Wire - bank information</div>
+                        <form class="form paymentDashboard__list" action="" method="post" data-href="/" data-action="payBankInfo" id="payBankInfo" onsubmit="return false;">
+                            
+                        </form>
+                        <div class="paymentDashboard__add js-acc-item">
+                            <div class="paymentDashboard__add-header js-acc-title">
+                                <span class="paymentDashboard__add-header-text">Add New Wire-Bank Information</span><span class="paymentDashboard__add-header-icon">
+                                    <span class="paymentDashboard__add-header-icon-minus">
+                                        <svg class="icon__minus" width="512px" height="512px">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </span><span class="paymentDashboard__add-header-icon-plus">
+                                        <svg class="icon__add" width="512px" height="512px">
+                                            <use xlink:href="#add"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="paymentDashboard__add-content js-acc-content">
+                                <div class="paymentDashboard__form">
+                                    <form class="form form--addNewBankMethod" action="" method="post" data-href="/" data-action="payAddNewBankMethod" id="payAddNewBankMethod" onsubmit="return false;">
+                                        <label class="form__label form__label--address">
+                                            <div class="form__caption">holder name:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" id="holderName" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <div class="form__labelGroup form__labelGroup--radio">
+                                            <div class="form__caption">Holder type</div>
+                                            <div class="form__radioGroup">
+                                                <label class="form__label form__label--radio">
+                                                    <input class="form__radio" type="radio" checked="checked" name="holderType" value="individual"><span class="form__radio-icon"></span><span class="form__radio-box">Individual</span>
+                                                </label>
+                                                <label class="form__label form__label--radio checked">
+                                                    <input class="form__radio" type="radio" checked="checked" name="holderType" value="company"><span class="form__radio-icon"></span><span class="form__radio-box">Company</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="form__label form__label--address">
+                                            <div class="form__caption">Routing number:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" id="routingNumber" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--address">
+                                            <div class="form__caption">Account number:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" id="accountNumber" placeholder="" required>
+                                            </div>
+                                        </label>
+                                        <div class="form__label form__label--button">
+                                            <div class="spinner">
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                            </div>
+                                            <button class="form__button" type="button" id="addBankAccount">
+                                                <span class="text">Save</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentDashboard__content-item js-tabContentItem" data-id="getPayment">
+                <div class="paymentDashboard__inner">
+                    <div class="paymentDashboard__right">
+                        <div class="paymentDashboard__title">Wire - bank information</div>
+                        <form class="form paymentDashboard__list" action="" method="post" data-href="/" data-action="getPaymentBankInfo" id="getPaymentBankInfo" onsubmit="return false;">
+                            
+                        </form>
+                        <div class="paymentDashboard__add js-acc-item">
+                            <div class="paymentDashboard__add-header js-acc-title">
+                                <span class="paymentDashboard__add-header-text">Add New Wire-Bank Information</span><span class="paymentDashboard__add-header-icon">
+                                    <span class="paymentDashboard__add-header-icon-minus">
+                                        <svg class="icon__minus" width="512px" height="512px">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </span><span class="paymentDashboard__add-header-icon-plus">
+                                        <svg class="icon__add" width="512px" height="512px">
+                                            <use xlink:href="#add"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="paymentDashboard__add-content js-acc-content">
+                                <div class="paymentDashboard__form">
+                                    <form class="form form--addNewBankMethod" action="" method="post" data-href="/" data-action="getPaymentAddNewBankMethod" id="getPaymentAddNewBankMethod" onsubmit="return false;">
+                                        <label class="form__label form__label--name">
+                                            <div class="form__caption">Account holder name:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" name="holder-name" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--name">
+                                            <div class="form__caption">Bank name:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" name="bank-name" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--address">
+                                            <div class="form__caption">Bank address:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" name="bank-address" placeholder="" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--address">
+                                            <div class="form__caption">Account address:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" name="account-address" placeholder="" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--number">
+                                            <div class="form__caption">ABA number:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field js-numberOnly" type="text" name="number" data-mask="000000000" minlength="9" autocomplete="off" placeholder="" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--number">
+                                            <div class="form__caption">BIK/SWIFT:</div>
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="text" name="code" autocomplete="off" placeholder="" required>
+                                            </div>
+                                        </label>
+                                        <div class="form__label form__label--button">
+                                            <div class="spinner">
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                            </div>
+                                            <button class="form__button" type="submit">
+                                                <span class="text">Add method</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="paymentDashboardCard" id="creditCardDetail">
+    <div class="paymentDashboardCard__inner">
+        <div class="paymentDashboardCard__info">
+            <div class="paymentDashboardCard__info-list">
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Brand:</div>
+                    <div class="paymentDashboardCard__info-list-item-value ccBrand"></div>
+                </div>
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Number:</div>
+                    <div class="paymentDashboardCard__info-list-item-value ccNumber"></div>
+                </div>
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Expiration date:</div>
+                    <div class="paymentDashboardCard__info-list-item-value ccExpDate"></div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="paymentDashboardCard__bottom">
+            <div class="paymentDashboardCard__link">Update card data</div><a class="paymentDashboardCard__link paymentDashboardCard__link--remove js-popup" href="#questionPopup">Remove card</a>
+        </div>-->
+    </div>
+</div>
+<div class="paymentDashboardCard" id="bankAccountDetail">
+    <div class="paymentDashboardCard__inner">
+        <div class="paymentDashboardCard__info">
+            <div class="paymentDashboardCard__info-list">
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Bank Name:</div>
+                    <div class="paymentDashboardCard__info-list-item-value" id="bankName"></div>
+                </div>
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Holder Name:</div>
+                    <div class="paymentDashboardCard__info-list-item-value" id="holderName"></div>
+                </div>
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Routing Number:</div>
+                    <div class="paymentDashboardCard__info-list-item-value" id="routingNumber"></div>
+                </div>
+                <div class="paymentDashboardCard__info-list-item">
+                    <div class="paymentDashboardCard__info-list-item-title">Account Number:</div>
+                    <div class="paymentDashboardCard__info-list-item-value" id="accountNumber"></div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="paymentDashboardCard__bottom">
+            <div class="paymentDashboardCard__link">Update card data</div><a class="paymentDashboardCard__link paymentDashboardCard__link--remove js-popup" href="#questionPopup">Remove card</a>
+        </div>-->
+    </div>
+</div>

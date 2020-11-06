@@ -1,0 +1,93 @@
+﻿<div class="box box--bookingBlock">
+    <div class="box__inner">
+        <div class="bookingBlock bookingBlock--flight">
+            <div class="bookingBlock__header">
+                <div class="bookingBlock__header-top">
+                    <div class="bookingBlock__header-inner">
+                        <div class="bookingBlock__breadcrumbs">
+                            <div class="breadcrumbs">
+                                <a class="breadcrumbs__item breadcrumbs__item--link" href="/app/main"><span class="breadcrumbs__text">Map</span></a>
+                                <span class="breadcrumbs__item breadcrumbs__item--link" id="booking_process_search_link">
+                                    <span class="breadcrumbs__text">Search Results</span>
+                                </span>
+                                <div class="breadcrumbs__item">
+                                    <span class="breadcrumbs__text">Booking</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookingBlock__info">
+                            <div class="bookingBlock__info-left">
+                                <div class="bookingBlock__info-title">Booking:</div>
+                            </div>
+                            <div class="bookingBlock__info-right">
+                                <div class="bookingBlock__info-list">
+                                    <div class="bookingBlock__info-list-item bookingBlock__info-list-item--route">
+                                        <div class="bookingBlock__info-list-icon">
+                                            <svg class="icon__placeholder" width="21px" height="21px">
+                                                <use xlink:href="#placeholder"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="bookingBlock__info-list-text">
+                                            <span id="departureName"></span><span class="arrow">
+                                                <svg class="icon__long-left-arrow" width="12px" height="12px">
+                                                    <use xlink:href="#long-left-arrow"></use>
+                                                </svg>
+                                            </span><span id="arrivalName"></span>
+                                        </div>
+                                    </div>
+                                    <div class="bookingBlock__info-list-item bookingBlock__info-list-item--way">
+                                        <div class="bookingBlock__info-list-icon">
+                                            <svg class="icon__airplane" width="20px" height="20px">
+                                                <use xlink:href="#airplane"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="bookingBlock__info-list-text" id="directionText"></div>
+                                    </div>
+                                    <div class="bookingBlock__info-list-item bookingBlock__info-list-item--date">
+                                        <div class="bookingBlock__info-list-icon">
+                                            <svg class="icon__calendar" width="17px" height="17px">
+                                                <use xlink:href="#calendar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="bookingBlock__info-list-text" id="deptRetDates"></div>
+                                    </div>
+                                    <div class="bookingBlock__info-list-item bookingBlock__info-list-item--count">
+                                        <div class="bookingBlock__info-list-icon">
+                                            <svg class="icon__user" width="17px" height="17px">
+                                                <use xlink:href="#user"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="bookingBlock__info-list-text" id="pax"></div>
+                                    </div>
+                                    <div class="bookingBlock__info-list-item bookingBlock__info-list-item--type">
+                                        <div class="bookingBlock__info-list-icon">
+                                            <svg class="icon__charter-flight" width="17px" height="17px">
+                                                <use xlink:href="#charter-flight"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="bookingBlock__info-list-text" id="bookingType"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookingBlock__header-bottom">
+                    <div class="bookingBlock__nav js-bookingNav">
+                        <a class="bookingBlock__nav-item js-bookingNav-item active" data-tab="flights" data-tabid="flightBooking" data-loaded="false">Flights</a>
+                        <a class="bookingBlock__nav-item js-bookingNav-item" data-tab="aircraft" data-tabid="aircraftBooking" data-loaded="false">Aircraft</a>
+                        <a class="bookingBlock__nav-item js-bookingNav-item" data-tab="travelers" data-tabid="travelersBooking" data-loaded="false">Travelers</a>
+                        <a class="bookingBlock__nav-item js-bookingNav-item" data-tab="terms" data-tabid="termsBooking" data-loaded="false">Terms</a>
+                        <a class="bookingBlock__nav-item js-bookingNav-item" data-tab="confirmation" data-tabid="confirmationBooking" data-loaded="false">Confirmation</a>
+                        <a class="bookingBlock__nav-item js-bookingNav-item" data-tab="payment" data-tabid="paymentBooking" data-loaded="false">Payment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bookingBlock__content js-customScroll">
+                <div class="bookingBlock__content-inner">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

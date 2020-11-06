@@ -1,0 +1,157 @@
+﻿<div class="box box--dashboardBlock">
+    <div class="box__inner">
+        <div class="dashboardBlock dashboardBlock--tabs dashboardBlock--admin">
+            <div class="dashboardBlock__sidebar js-customScroll">
+                <div class="dashboardBlock__nav">
+                    <div class="dashboardBlock__nav-item dashboardBlock__nav-item--active" id="dashboard-show" data-tab="dashboard">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)"><span class="dashboardBlock__nav-text">Dashboard</span></a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="profile">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="profile">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__user2" width="16px" height="16px">
+                                    <use xlink:href="#user2"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Profile</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="settings">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__locked" width="17px" height="17px">
+                                    <use xlink:href="#locked"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Settings &amp; security</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="network">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="network">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__network" width="18px" height="18px">
+                                    <use xlink:href="#network"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Network activity <span id="admin-activity-notification-count"></span></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="apRequests">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="requests">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__discuss" width="17px" height="17px">
+                                    <use xlink:href="#discuss"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Aircraft provider requests <span id="admin-provider-notification-count"></span> </span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="flightReqs">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="requests">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__calendar-aircraft" width="19px" height="19px">
+                                    <use xlink:href="#calendar-aircraft"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Manual requests <span id="admin-flight-request-notification-count"></span></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="flights">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="flights">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__distance" width="19px" height="19px">
+                                    <use xlink:href="#distance"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Flights: <i>current, historical and upcoming</i></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="auctions">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="auctions">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__auction" width="16px" height="16px">
+                                    <use xlink:href="#auction"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Auctions: <i>current and historical</i></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="reservations">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="booking-list">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Reservations </span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="confirmed-reservations" >
+                        <a class="dashboardBlock__nav-link">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Confirmed Reservations <span></span> </span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="bookings">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="booking-list">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Bookings <span id="admin-booking-notification-count"></span></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="confirmations" >
+                        <a class="dashboardBlock__nav-link">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Confirmed Requests <span></span> </span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="booking-confirm">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__checked-circle" width="21px" height="21px">
+                                    <use xlink:href="#checked-circle"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Confirm manual booking</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="requests-live">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__armchair" width="19px" height="19px">
+                                    <use xlink:href="#armchair"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Live seat requests</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="flyRewards">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__giftbox" width="18px" height="18px">
+                                    <use xlink:href="#giftbox"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">FLY<b>Rewards</b></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="payment">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__wallet" width="18px" height="18px">
+                                    <use xlink:href="#wallet"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Sell, legs, seats</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="messages">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__message" width="25px" height="25px">
+                                    <use xlink:href="#message"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Messages</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

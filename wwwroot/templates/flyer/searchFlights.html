@@ -1,0 +1,202 @@
+﻿<div class="box box--mapBlock" id="searchFlightsBlock">
+                            <div class="box__inner">
+                                <div class="mapBlock js-tabBox mapBlock--search">
+                                    <div class="mapBlock__header">
+                                        <div class="mapBlock__form">
+                                            <form class="form form--filterSearch js-filterSearch" action="" method="post" data-action="filterSearch" id="flightsSearchFilters" onsubmit="return false;">
+                                                <div class="mapBlock__form-top">
+                                                    <div class="mapBlock__form-left">
+                                                        <label class="form__label form__label--radio">
+                                                            <input class="form__radio js-changeWay" type="radio" name="type" checked="checked" value="one-way"><span class="form__radio-box">One-way</span><span class="form__radio-icon">
+            <svg class="icon__plane" width="12px" height="12px">
+                <use xlink:href="#plane"></use>
+            </svg>
+        </span>
+                                                        </label>
+                                                        <label class="form__label form__label--radio">
+                                                            <input class="form__radio js-changeWay" type="radio" name="type" value="round-trip"><span class="form__radio-box">Round-trip</span><span class="form__radio-icon">
+            <svg class="icon__double-plane" width="20px" height="20px">
+                <use xlink:href="#double-plane"></use>
+            </svg>
+        </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="mapBlock__form-center">
+                                                      <input type="hidden" id="direction" />
+                                                        <label class="form__label form__label--checkbox">
+                                                            <input class="form__checkbox" type="checkbox" name="bookingType" checked="checked" value="2"><span class="form__checkbox-icon"></span><span class="form__checkbox-box">Book&nbsp;charter&nbsp;aircraft</span>
+                                                        </label>
+                                                        <label class="form__label form__label--checkbox">
+                                                            <input class="form__checkbox" type="checkbox" name="bookingType" value="4"><span class="form__checkbox-icon"></span><span class="form__checkbox-box">Book&nbsp;charter&nbsp;seats</span>
+                                                        </label>
+                                                        <label class="form__label form__label--checkbox">
+                                                            <input class="form__checkbox" type="checkbox" name="bookingType" value="8"><span class="form__checkbox-icon"></span><span class="form__checkbox-box">Book&nbsp;commercial&nbsp;seats</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="mapBlock__form-right">
+                                                        <a class="mapBlock__flight-info js-popup" href="#flightsSearchExtraFilters">
+                                                            <svg class="icon__controls" width="28px" height="28px">
+                                                                <use xlink:href="#controls"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mapBlock__form-bottom">
+                                                    <div class="form__labelGroup">
+                                                        <label class="form__label form__label--text">
+                                                            <div class="form__field-wrapper">
+                                                                <input class="form__field js-typeahead typeahead-input" id="departure" type="text" name="from" placeholder="Take off" required>
+                                                                <input type="hidden" id="departureId" />
+                                                                <div class="form__caption">From</div>
+                                                            </div>
+                                                        </label>
+                                                        <label class="form__label form__label--text">
+                                                            <div class="form__field-wrapper">
+                                                                <input class="form__field js-typeahead typeahead-input" id="arrival" type="text" name="to" placeholder="Land" required>
+                                                                <input type="hidden" id="arrivalId" />
+                                                                <div class="form__caption">To</div>
+                                                            </div>
+                                                        </label>
+                                                        <label class="form__label form__label--date">
+                                                            <div class="form__field-wrapper">
+                                                                <input class="form__field js-gmi-datepicker-period js-gmi-datepicker--black" id="calendar" type="text" name="date" placeholder="select date" required>
+                                                                <div class="form__caption">click to change</div>
+                                                            </div>
+                                                        </label>
+                                                        <label class="form__label form__label--number js-counter">
+                                                            <div class="form__field-wrapper">
+                                                                <div class="form__icon">
+                                                                    <svg class="icon__users" width="27px" height="27px">
+                                                                        <use xlink:href="#users"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <input class="form__field js-counter-input" id="passengersNum" type="number" name="count" min="1" max="99" value="2" required>
+                                                                <div class="form__arrow">
+                                                                    <div class="form__arrow-plus js-counter-plus">
+                                                                        <svg class="icon__up-arrow" width="33px" height="33px">
+                                                                            <use xlink:href="#up-arrow"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="form__arrow-minus js-counter-minus">
+                                                                        <svg class="icon__down-arrow" width="33px" height="33px">
+                                                                            <use xlink:href="#down-arrow"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <div class="form__label form__label--button">
+                                                            <div class="spinner">
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                                <div class="spinner__item"></div>
+                                                            </div>
+                                                            <button class="form__button" type="submit" id="searchFlightsBtn"><span class="text">Go</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form__labelGroup">
+                                                        <label class="form__label form__label--checkbox">
+                                                            <input class="form__checkbox" type="checkbox" name="radius" data-loctype="dep" value="from"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">See all airports within a <span>50</span> mile radius</span>
+                                                        </label>
+                                                        <label class="form__label form__label--checkbox">
+                                                            <input class="form__checkbox" type="checkbox" name="radius" value="to"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">See all airports within a <span>50</span> mile radius</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="mapBlock__content">
+                                        <div class="mapBlock__bg"></div>
+                                        <div class="mapBlock__map" id="googleMap"></div>
+                                        <div class="mapBlock__sidebar js-sidebar">
+                                            <div class="mapBlock__sidebar-title js-sidebarTitle">
+                                                <div class="mapBlock__sidebar-title-inner"><span class="text">Featured flights</span><span class="icon">
+            <svg class="icon__down-arrow" width="33px" height="33px">
+                <use xlink:href="#down-arrow"></use>
+            </svg>
+        </span>
+                                                </div>
+                                            </div>
+                                            <div class="mapBlock__sidebar-content">
+                                                <div class="mapBlock__list js-customScroll" id="featured-flights-list">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="formPopup" id="flightsSearchExtraFilters">
+    <div class="formPopup__inner">
+        <div class="formPopup__title">Additional flight request information</div>
+        <div class="formPopup__form">
+            <form class="form form--flightInfo js-ajaxForm" action="" method="post" data-href="/" data-action="flightInfo" id="flightInfo" onsubmit="return false;">
+                <div class="form__top">
+                    <div class="form__title">Choose aircraft type</div>
+                    <div class="form__labelGroup">
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="aircraftType" value="very light jet"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Very light jet <span>(4 - 6 seats max)</span></span>
+                        </label>
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="aircraftType" value="light jet"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Light jet <span>(6 - 8 seats max)</span></span>
+                        </label>
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="aircraftType" value="midsize jet"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Midsize jet <span>(9 - 13 seats max)</span></span>
+                        </label>
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="aircraftType" value="super midsize jet"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Super midsize jet <span>(9 - 16 seats max)</span></span>
+                        </label>
+                        <label class="form__label form__label--checkbox">
+                            <input class="form__checkbox" type="checkbox" name="aircraftType" value="heavy jet"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Heavy jet <span>(12 - 19 seats max)</span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__bottom">
+                    <div class="form__title">Price range</div>
+                    <div class="form__labelGroup">
+                        <label class="form__label form__label--text price">
+                            <div class="form__field-wrapper">
+                                <input class="form__field" type="text" name="priceFrom" placeholder="$1,000" autocomplete="off" required>
+                            </div>
+                        </label>
+                        <div class="form__caption">To</div>
+                        <label class="form__label form__label--text price">
+                            <div class="form__field-wrapper">
+                                <input class="form__field" type="text" name="priceTo" placeholder="$31,000" autocomplete="off" required>
+                            </div>
+                        </label>
+                        <!--<div class="form__caption"><span>Or</span>&ensp;max price</div>
+                        <label class="form__label form__label--text price">
+                            <div class="form__field-wrapper">
+                                <input class="form__field" type="text" name="priceMax" placeholder="$50,000" autocomplete="off" required>
+                            </div>
+                        </label>-->
+                    </div>
+                    <div class="form__label form__label--button">
+                        <button class="form__button" type="submit">
+                            <span class="text">Done</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="thanksPopup" id="noFlightsFoundPopup">
+    <div class="thanksPopup__decor"></div>
+    <div class="thanksPopup__inner">
+        <div class="thanksPopup__title"></div>
+        <div class="thanksPopup__text">We do not currently have any {bookingTypeFilter} that fit your criteria listed in our system.  We will, however, be back to you with flight options within 24 hours, by email and by message, once we perform a manual search.  Click "Request Flight" below to initiate this search process.</div>
+        <div class="thanksPopup__button thanksPopup__button--close" id="requestFlightBtn"  data-fancybox-close>
+            <span class="text">Request Flight</span>
+        </div>
+    </div>
+</div>

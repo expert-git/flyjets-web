@@ -1,0 +1,97 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="settingsDashboard">
+        <div class="settingsDashboard__left">
+            <div class="settingsDashboard__title">Password</div>
+            <div class="settingsDashboard__form">
+                <form class="form form--changePassword js-ajaxForm" action="" method="post" data-href="/" data-action="changePassword" id="changePasswordForm" onsubmit="return false;">
+                    <label class="form__label form__label--password">
+                        <div class="form__caption">Old profile password:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="password" name="oldPassword" autocomplete="off" placeholder="Enter old password" required>
+                            <div class="form__icon js-openPass">
+                                <span class="form__icon-open">
+                                    <svg class="icon__eye-open" width="25px" height="25px">
+                                        <use xlink:href="#eye-open"></use>
+                                    </svg>
+                                </span><span class="form__icon-close">
+                                    <svg class="icon__eye-close" width="59.049px" height="59.049px">
+                                        <use xlink:href="#eye-close"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--password">
+                        <div class="form__caption">New profile password:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="password" name="newPassword" autocomplete="off" placeholder="Enter new password" minlength="6" required>
+                            <div class="form__icon js-openPass">
+                                <span class="form__icon-open">
+                                    <svg class="icon__eye-open" width="25px" height="25px">
+                                        <use xlink:href="#eye-open"></use>
+                                    </svg>
+                                </span><span class="form__icon-close">
+                                    <svg class="icon__eye-close" width="59.049px" height="59.049px">
+                                        <use xlink:href="#eye-close"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="form__error">min length 6 symbols</div>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--confirm disabled">
+                        <div class="form__caption">Confirm new password:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="password" name="confirmPassword" autocomplete="off" disabled placeholder="Confirm new password" minlength="6" required>
+                            <div class="form__icon js-openPass">
+                                <span class="form__icon-open">
+                                    <svg class="icon__eye-open" width="25px" height="25px">
+                                        <use xlink:href="#eye-open"></use>
+                                    </svg>
+                                </span><span class="form__icon-close">
+                                    <svg class="icon__eye-close" width="59.049px" height="59.049px">
+                                        <use xlink:href="#eye-close"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="form__error">passwords do not match</div>
+                        </div>
+                    </label>
+                    <div class="form__label form__label--button disabled">
+                        <div class="spinner">
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                        </div>
+                        <button class="form__button" type="button" id="changePassword" disabled>
+                            <span class="text">Change password</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="settingsDashboard__right">
+            <div class="settingsDashboard__title">Alerts</div>
+            <div class="settingsDashboard__form">
+                <form class="form form--typeAlerts js-ajaxForm" action="" method="post" data-href="/" data-action="alerts" id="typeAlertsForm" onsubmit="return false;">
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" checked="checked" name="type" value="inApp"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Receive in-application alerts and notifications</span>
+                    </label>
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" checked="checked" name="type" value="email"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Receive email alerts and notifications</span>
+                    </label>
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" name="type" value="sms"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Receive text message alerts and notifications</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    

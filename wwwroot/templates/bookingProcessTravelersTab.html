@@ -1,0 +1,103 @@
+﻿<div class="travelersBooking">
+    <div class="travelersBooking__content">
+            <a class="bookingBlock__content-prev js-bookingNav-item" href="#">
+                    <span class="icon">
+                        <svg class="icon__left-arrow" width="24px" height="24px">
+                            <use xlink:href="#left-arrow"></use>
+                        </svg>
+                    </span>
+                    <span class="text">Back</span></a>
+                    <!-- add class "disabled" for disabled btn -->
+                    <a class="bookingBlock__content-next js-bookingNav-item" href="#" data-tooltip="#infoForNextStep">
+                        <span class="icon">
+                            <svg class="icon__right-arrow" width="12px" height="22px">
+                                <use xlink:href="#right-arrow"></use>
+                            </svg>
+                        </span>
+                    <span class="text">Next</span>
+                </a>
+
+        <div class="travelersBooking__content-left">
+            <div class="travelersBooking__title">Travelers</div>
+            <div class="travelersBooking__empty js-travelers-empty">no travelers</div>
+            <div class="travelersBooking__list">
+                
+            </div>
+        </div>
+        <div class="travelersBooking__content-right">
+            <div class="travelersBooking__title">Add travelers</div>
+            <div class="travelersBooking__info">
+                <article>
+                    <p>Users are able to add other users who are already members of FLYJETS</p>
+                    <p>
+                        Non-members will receive email invitations to join FLYJETS, add their info to the trip (in Travelers tab) and <b>possibly split payment with group</b>
+                    </p>
+                </article>
+            </div>
+            <div class="travelersBooking__form js-addTravelers-list" data-limit="5">
+                <form class="form form--addTravelers js-addTravelersForm  js-ajaxForm" action="" method="post" data-href="/" data-action="addTravelers" id="addTravelersForm" onsubmit="return false;">
+                    <div class="form__list js-addTravelers-wrapper">
+                        <div class="form__list-item js-addTravelers-item">
+                            <label class="form__label form__label--text">
+                                <div class="form__remove js-remove-addTravelers-item">
+                                    <svg class="icon__minus-sign-in-a-circle" width="64px" height="64px">
+                                        <use xlink:href="#minus-sign-in-a-circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="email" name="email" id="memberEmail" placeholder="Enter e-mail" autocomplete="off">
+                                    <div class="form__icon">
+                                        <svg class="icon__checked" width="19px" height="19px">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="travelersBooking__add-travelers-input js-acc-item mutation open">
+                                <div class="travelersBooking__add-travelers-input-header js-acc-title">
+                                    <div class="travelersBooking__add-travelers-input-header-text">
+                                        Or&nbsp;<b>input name and info him/herself</b>
+                                    </div>
+                                    <div class="travelersBooking__add-travelers-input-header-icon">
+                                        <svg class="icon__down-arrow" width="33px" height="33px">
+                                            <use xlink:href="#down-arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="travelersBooking__add-travelers-input-content js-acc-content" style="display: block;">
+                                    <div class="travelersBooking__add-travelers-input-form">
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">First Name:</div>
+                                                <input class="form__field" type="text" id="nonMemberFirstName" placeholder="" autocomplete="off">
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Last Name:</div>
+                                                <input class="form__field" type="text" id="nonMemberLastName" placeholder="" autocomplete="off">
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Email:</div>
+                                                <input class="form__field" type="text" id="nonMemberEmail" placeholder="" autocomplete="off">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__button-wr">
+                        <div class="form__label form__label--button">
+                            <button class="form__button" type="button" id="addTraveler">
+                                <span class="text">Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

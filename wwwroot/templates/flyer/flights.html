@@ -1,0 +1,68 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="flightsDashboard js-tabBox flightsDashboard--flyer">
+        <div class="flightsDashboard__top">
+            <div class="flightsDashboard__header">
+                <div class="flightsDashboard__title">Flights - current and upcoming</div>
+                <div class="flightsDashboard__nav">
+                    <div class="flightsDashboard__nav-item js-tabNavItem active" data-id="current">Current</div>
+                    <div class="flightsDashboard__nav-item js-tabNavItem" data-id="upcoming">Upcoming</div>
+                </div>
+            </div>
+            <div class="flightsDashboard__content">
+                <div class="flightsDashboard__content-item js-tabContentItem" data-id="current">
+                    <div class="flightsDashboard__content-item-header">
+                        <div class="flightsDashboard__content-item-header-left">
+                            <div class="flightsDashboard__subtitle flightsDashboard__subtitle--count">
+                                <span>Current flights</span><!--<span class="flightsDashboard__subtitle-count">2</span>-->
+                            </div>
+                        </div>
+                        <div class="flightsDashboard__content-item-header-right">
+                            <div class="flightsDashboard__subtitle">Passengers</div>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__content-item-body">
+                        <div class="flightsDashboard__list" id="currentFlights">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="flightsDashboard__content-item js-tabContentItem" data-id="upcoming">
+                    <div class="flightsDashboard__content-item-header">
+                        <div class="flightsDashboard__content-item-header-left">
+                            <div class="flightsDashboard__subtitle flightsDashboard__subtitle--count">
+                                <span>Upcoming flights</span><span class="flightsDashboard__subtitle-count">2</span>
+                            </div>
+                        </div>
+                        <div class="flightsDashboard__content-item-header-right">
+                            <div class="flightsDashboard__subtitle">Passengers</div>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__content-item-body">
+                        <div class="flightsDashboard__list" id="upcomingFlights">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flightsDashboard__bottom">
+            <div class="flightsDashboard__subtitle flightsDashboard__subtitle--count">
+                <span>Historical flights</span><span class="flightsDashboard__subtitle-count">25</span>
+            </div>
+            <div class="flightsDashboard__history">
+                <div class="flightsDashboard__history-header">
+                    <div class="flightsDashboard__history-header-inner">
+                        <div class="flightsDashboard__history-cell">№</div>
+                        <div class="flightsDashboard__history-cell">Confirmation number</div>
+                        <div class="flightsDashboard__history-cell">Booking date</div>
+                        <div class="flightsDashboard__history-cell">Origin</div>
+                        <div class="flightsDashboard__history-cell">Destination</div>
+                    </div>
+                </div>
+                <div class="flightsDashboard__history-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

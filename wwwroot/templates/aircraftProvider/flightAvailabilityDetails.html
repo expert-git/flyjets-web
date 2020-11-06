@@ -1,0 +1,108 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="availabilityDashboard availabilityDashboard--flight">
+        <form class="form form--availability js-availabilityForm" action="" id="flightAvailabilityForm" data-action="flightAvailabilityForm" method="post" onsubmit="return false;">
+            <div class="form__left">
+                <div class="form__labelGroup form__labelGroup--text">
+                    <label class="form__label form__label--select">
+                        <div class="form__caption">Aircraft number</div>
+                        <div class="form__field-wrapper">
+                            <select class="form__select" name="number" id="aircrafts">
+                                <option value="">Choose from list</option>
+                            </select>
+                        </div>
+                    </label>
+                    <div class="form__radioGroup">
+                        <label class="form__label form__label--radio checked">
+                            <input class="form__radio js-changeWay" type="radio" name="direction" checked="checked" data-type="round" data-text="From-To:" value="1"><span class="form__radio-box">Round trip (two legs)</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio js-changeWay" type="radio" name="direction" data-type="one" data-text="From:" value="2"><span class="form__radio-box">Single legs</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--locations">
+                    <label class="form__label form__label--text">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__departures" width="21px" height="21px">
+                                    <use xlink:href="#departures"></use>
+                                </svg>
+                            </span><span class="text">Departure airport:</span>
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-typeahead" type="text" name="departure" id="departure" placeholder="Enter here" autocomplete="off" required>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__arrival" width="21px" height="21px">
+                                    <use xlink:href="#arrival"></use>
+                                </svg>
+                            </span><span class="text">Landing airport:</span>
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-typeahead" type="text" name="arrival" id="arrival" placeholder="Enter here" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--date">
+                    <div class="form__header">
+                        <div class="form__title">Dates:</div>
+                        <div class="form__subtitle">Input for one leg or for two legs, depending on iniital input as round-trip or single leg</div>
+                    </div>
+                    <label class="form__label form__label--date">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__calendar" width="17px" height="17px">
+                                    <use xlink:href="#calendar"></use>
+                                </svg>
+                            </span><span class="text js-date-caption">From-To:</span>
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-gmi-datepicker" type="text" name="dates" id="dates" placeholder="click to change" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--price">
+                    <div class="form__title">Flight(s) price:</div>
+                    <label class="form__label form__label--price price">
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="price" id="price" placeholder="Enter cost here in $" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__label form__label--button">
+                    <div class="spinner">
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                    </div>
+                    <button class="form__button" type="button" id="saveFlightAvailability">
+                        <span class="text">Save</span>
+                    </button>
+                </div>
+                <div class="form__label form__label--button">
+                    <div class="spinner">
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                    </div>
+                    <button class="form__button" type="button" id="removeFlightAvailability">
+                        <span class="text">Remove</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

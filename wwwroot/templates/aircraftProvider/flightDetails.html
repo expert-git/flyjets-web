@@ -1,0 +1,208 @@
+﻿<div class="dashboardBlock__content" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="flightsDashboard js-tabBox flightsDashboard--provider">
+        <div class="flightsDashboard__header">
+            <a class="flightsDashboard__back">
+                <span class="icon">
+                    <svg class="icon__left-arrow" width="24px" height="24px">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
+                </span><span class="text">Back to all flights</span>
+            </a>
+        </div>
+        <div class="flightsDashboard__content">
+            <div class="flightsDashboard__content-left js-customScroll" data-outside>
+                <div class="flightsDashboard__detail">
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Flight number</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="flightNumber"></span>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Booking number</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="bookingNumber"></span>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Flyer&#39;s name</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="flyerName"></span>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Aircraft and Aircraft photo</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="aircraftModel"></span>
+                        </div>
+                        <div class="aircraftDetail__slider js-aircraftSlider aircraftDetail__slider--vertical" data-count-thumbs="3">
+                            <div class="aircraftDetail__slider-main">
+                                <div class="swiper-container js-aircraftSlider-main">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item aircraftDetail__slider-main-item--video" data-fancybox="detailGallery" href="#demo-video" style="background-image:url('/img/assets/aircraftDetail/1.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon">
+                                                        <svg class="icon__play-video" width="70px" height="70px">
+                                                            <use xlink:href="#play-video"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <video width="640" height="320" controls id="demo-video" style="display:none;">
+                                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+                                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+                                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">Your browser doesn't support HTML5 video tag.
+                                                </video>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/2.jpg" style="background-image:url('/img/assets/aircraftDetail/2.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/3.jpg" style="background-image:url('/img/assets/aircraftDetail/3.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/4.jpg" style="background-image:url('/img/assets/aircraftDetail/4.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/1.jpg" style="background-image:url('/img/assets/aircraftDetail/1.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/2.jpg" style="background-image:url('/img/assets/aircraftDetail/2.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/3.jpg" style="background-image:url('/img/assets/aircraftDetail/3.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="aircraftDetail__slider-main-item" data-fancybox="detailGallery" href="/img/assets/aircraftDetail/4.jpg" style="background-image:url('/img/assets/aircraftDetail/4.jpg')">
+                                                <div class="aircraftDetail__slider-main-item-back">
+                                                    <span class="aircraftDetail__slider-main-item-icon"><svg width="488.85" height="488.85" viewBox="0 0 488.85 488.85"><defs><linearGradient id="eyeG" x1="244.425" y1="0" x2="244.425" y2="488.85" gradientUnits="userSpaceOnUse"><stop stop-color="#41FB96" /><stop offset="1" stop-color="#12A053" /></linearGradient></defs><path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="url(#eyeG)" /></svg></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="aircraftDetail__slider-thumbs">
+                                <div class="swiper-container js-aircraftSlider-thumbs">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/1.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/2.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/3.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/4.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/1.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/2.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/3.jpg')"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="aircraftDetail__slider-thumbs-item" style="background-image:url('/img/assets/aircraftDetail/4.jpg')"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flightsDashboard__content-right js-customScroll">
+                <div class="flightsDashboard__detail">
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Departure</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="departure"></span>
+                        </div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="departureDate"></span>
+                        </div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="departureTime">N/A</span>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Arrival</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="arrival"></span>
+                        </div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="arrivalDate"></span>
+                        </div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="arrivalTime">N/A</span>
+                        </div>
+                    </div>
+                    <div class="flightsDashboard__detail-item">
+                        <div class="flightsDashboard__detail-item-caption">Trip duration</div>
+                        <div class="flightsDashboard__detail-item-text">
+                            <span class="text" id="flightDuration"></span>
+                        </div>
+                    </div>
+                    <!--<div class="flightsDashboard__detail-item flightsDashboard__detail-item--users">
+                        <div class="flightsDashboard__detail-item-caption">
+                            Passengers list <span>(if applicable)</span>
+                        </div>
+                        <div class="flightsDashboard__users">
+                            <a class="flightsDashboard__users-item" href="profileFlyerDashboard.html">
+                                <div class="flightsDashboard__users-avatar" style="background-image:url('/img/content/avatar.jpg')"></div>
+                                <div class="flightsDashboard__users-info">
+                                    <div class="flightsDashboard__users-name">Anna Li</div>
+                                    <div class="flightsDashboard__users-phone">8-666-777-88-34</div>
+                                </div>
+                            </a>
+                            <a class="flightsDashboard__users-item" href="profileFlyerDashboard.html">
+                                <div class="flightsDashboard__users-avatar" style="background-image:url('/img/content/avatar-3.jpg')"></div>
+                                <div class="flightsDashboard__users-info">
+                                    <div class="flightsDashboard__users-name">John Doe</div>
+                                    <div class="flightsDashboard__users-phone">8-666-777-88-34</div>
+                                </div>
+                            </a>
+                            <a class="flightsDashboard__users-item" href="profileFlyerDashboard.html">
+                                <div class="flightsDashboard__users-avatar" style="background-image:url('/img/content/avatar-2.jpg')"></div>
+                                <div class="flightsDashboard__users-info">
+                                    <div class="flightsDashboard__users-name">Oxana Ivanova</div>
+                                    <div class="flightsDashboard__users-phone">8-666-777-88-34</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

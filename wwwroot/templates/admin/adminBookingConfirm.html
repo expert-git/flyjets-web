@@ -1,0 +1,284 @@
+<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+  <div class="bookingDashboard bookingDashboard--admin js-tabBox bookingDashboard--confirm">
+    <div class="bookingDashboard__nav">
+      <div class="bookingDashboard__nav-item js-tabNavItem" id="outbound-booking-flight-nav" data-id=""><span class="text">Aircraft <span id="outbound-tail-number"></span></span>
+      </div>
+    </div>
+    <div class="bookingDashboard__content">
+      <div class="bookingDashboard__content-item js-tabContentItem" id="outbound-booking-flight-confirmation" data-id="">
+        <form class="form form--bookingManual" action="" data-href="" data-action="" method="post" onsubmit="return false;">
+          <div class="form__column">
+            <div class="form__group js-acc-item">
+              <div class="form__group-header js-acc-title">
+                <div class="form__group-icon">
+                  <svg class="icon__departures" width="21px" height="21px">
+                    <use xlink:href="#departures"></use>
+                  </svg>
+                </div>
+                <div class="form__group-title">Outbound departure</div>
+                <div class="form__group-arrow">
+                  <svg class="icon__down-arrow" width="33px" height="33px">
+                    <use xlink:href="#down-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form__group-content js-acc-content">
+                <div class="form__group-content-inner">
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Airport name</div>
+                    <div class="form__field-wrapper">
+                      <input id="outbound-airport-departure" class="form__field" type="text" name="outbound-departure-airport-name" placeholder="Fill in Airport Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Date and Estimated Time of Departure</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" id="outbound-airport-date" type="text" name="outbound-departure-date-and-time" placeholder="Fill in Date and Estimated Time of Departure (ETD)" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft provider</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="outbound-aircraft-provider" name="outbound-departure-aircraft-provider" placeholder="Fill in Aircraft Provider Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="outbound-departure-aircraft" name="outbound-departure-aircraft" placeholder="Fill in Aircraft" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <div class="form__labelGroup">
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Distance</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-departure-distance" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Total Passengers</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" id="outbound-departure-pax" name="outbound-departure-duration" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Max passengers</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" id="outbound-departure-max-pax" name="outbound-departure-max-pas" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                  </div><a class="form__link" href="#"><span class="text">photos &#38; details</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="form__group js-acc-item" id="inbound-departure">
+              <div class="form__group-header js-acc-title">
+                <div class="form__group-icon">
+                  <svg class="icon__departures" width="21px" height="21px">
+                    <use xlink:href="#departures"></use>
+                  </svg>
+                </div>
+                <div class="form__group-title">Inbound departure</div>
+                <div class="form__group-arrow">
+                  <svg class="icon__down-arrow" width="33px" height="33px">
+                    <use xlink:href="#down-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form__group-content js-acc-content">
+                <div class="form__group-content-inner">
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Airport name</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-departure-airport" name="inbound-departure-airport-name" placeholder="Fill in Airport Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Date and Estimated Time of Departure</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" id="inbound-departure-date" type="text" name="inbound-departure-date-and-time" placeholder="Fill in Date and Estimated Time of Departure (ETD)" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft provider</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-departure-aircraft-provider" name="inbound-departure-aircraft-provider" placeholder="Fill in Aircraft Provider Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-departure-aircraft" name="inbound-departure-aircraft" placeholder="Fill in Aircraft" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <div class="form__labelGroup">
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Distance</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="inbound-departure-distance" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Duration</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="inbound-departure-duration" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Max passengers</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" id="inbound-departure-pax" name="inbound-departure-max-pas" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                  </div><a class="form__link" href="#"><span class="text">photos &#38; details</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__column">
+            <div class="form__group js-acc-item">
+              <div class="form__group-header js-acc-title">
+                <div class="form__group-icon">
+                  <svg class="icon__arrival" width="21px" height="21px">
+                    <use xlink:href="#arrival"></use>
+                  </svg>
+                </div>
+                <div class="form__group-title">Outbound arrival</div>
+                <div class="form__group-arrow">
+                  <svg class="icon__down-arrow" width="33px" height="33px">
+                    <use xlink:href="#down-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form__group-content js-acc-content">
+                <div class="form__group-content-inner">
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Airport name</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" id="outbound-airport-arrival" type="text" name="outbound-arrival-airport-name" placeholder="Fill in Airport Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Date and Estimated Time of Departure</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="outbound-arrival-date" name="outbound-arrival-date-and-time" placeholder="Fill in Date and Estimated Time of Departure (ETD)" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft provider</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="outbound-arrival-provider" name="outbound-arrival-aircraft-provider" placeholder="Fill in Aircraft Provider Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" name="outbound-arrival-aircraft" id="outbound-arrival-aircraft" placeholder="Fill in Aircraft" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <div class="form__labelGroup">
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Distance</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-arrival-distance" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Duration</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-arrival-duration" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Max passengers</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-arrival-max-pas" id="outbound-arrival-pax" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                  </div><a class="form__link" href="#"><span class="text">photos &#38; details</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="form__group js-acc-item" id="inbound-arrival">
+              <div class="form__group-header js-acc-title">
+                <div class="form__group-icon">
+                  <svg class="icon__arrival" width="21px" height="21px">
+                    <use xlink:href="#arrival"></use>
+                  </svg>
+                </div>
+                <div class="form__group-title">Inbound arrival</div>
+                <div class="form__group-arrow">
+                  <svg class="icon__down-arrow" width="33px" height="33px">
+                    <use xlink:href="#down-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form__group-content js-acc-content">
+                <div class="form__group-content-inner">
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Airport name</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-arrival-airport" name="outbound-arrival-airport-name" placeholder="Fill in Airport Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Date and Estimated Time of Departure</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-arrival-date" name="outbound-arrival-date-and-time" placeholder="Fill in Date and Estimated Time of Departure (ETD)" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft provider</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-arrival-aircraft-provider" name="outbound-arrival-aircraft-provider" placeholder="Fill in Aircraft Provider Name" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft</div>
+                    <div class="form__field-wrapper">
+                      <input class="form__field" type="text" id="inbound-arrival-aircraft" name="outbound-arrival-aircraft" placeholder="Fill in Aircraft" autocomplete="off" required>
+                    </div>
+                  </label>
+                  <div class="form__labelGroup">
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Distance</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-arrival-distance" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Duration</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="outbound-arrival-duration" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                    <label class="form__label form__label--text">
+                      <div class="form__caption">Max passengers</div>
+                      <div class="form__field-wrapper">
+                        <input class="form__field" type="text" id="inbound-arrival-pax" name="outbound-arrival-max-pas" placeholder="Type here" autocomplete="off" required>
+                      </div>
+                    </label>
+                  </div><a class="form__link" href="#"><span class="text">photos &#38; details</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="form__label form__label--price price">
+            <div class="form__caption">Price and/or price per seat:</div>
+            <div class="form__field-wrapper">
+              <input class="form__field" type="text" id="total-booking-cost" name="price-per-seat" placeholder="Enter price in $" autocomplete="off" required>
+            </div>
+          </label>
+          <div id="travelers"></div>
+          <div class="form__label form__label--button">
+            <button id="start-checkout" class="form__button form__button--black" type="button"><span class="text">Add all trip/aircraft options and send to flyer</span>
+            </button>
+            <button class="form__button form__button--green" type="submit"><span class="text">Send chosen trip/aircraft and book</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

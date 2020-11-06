@@ -1,0 +1,26 @@
+﻿<div class="dashboardBlock__content" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="bookingDashboard bookingDashboard--provider bookingDashboard--list">
+        <div class="bookingDashboard__header">
+            <div class="bookingDashboard__title">Flights list</div>
+            <a class="buttonCreate" id="newFlightAvailability"><span class="text">Create</span></a>
+        </div>
+        <div class="bookingDashboard__table">
+            <div class="bookingDashboard__table-header">
+                <div class="bookingDashboard__table-cell">Aircraft</div>
+                <div class="bookingDashboard__table-cell">Departure</div>
+                <div class="bookingDashboard__table-cell">Arrival</div>
+                <div class="bookingDashboard__table-cell">Departure date</div>
+            </div>
+            <div class="bookingDashboard__table-body js-customScroll">
+                <div class="bookingDashboard__table-row">
+                    <div class="bookingDashboard__table-cell aircraftNumber"></div>
+                    <div class="bookingDashboard__table-cell departureLocation"></div>
+                    <div class="bookingDashboard__table-cell arrivalLocation"></div>
+                    <div class="bookingDashboard__table-cell departureDate">
+                        <a class="bookingDashboard__table-detail">click for details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

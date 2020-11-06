@@ -1,0 +1,164 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>cb3df6c5-117d-48e6-8562-1549ebfec267</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\1gkmvlha.ybl~" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App">
+      <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+      <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\fonts\Roboto\RobotoBlack\RobotoBlack.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoBoldItalic\RobotoBoldItalic.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoBold\RobotoBold.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoItalic\RobotoItalic.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoLightItalic\RobotoLightItalic.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoLight\RobotoLight.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoMedium\RobotoMedium.woff2" />
+    <None Include="wwwroot\fonts\Roboto\RobotoRegular\RobotoRegular.woff2" />
+    <None Include="wwwroot\img\assets\bookingBlock\payment\decor-line.svg" />
+    <None Include="wwwroot\img\assets\common\form\plane-green.svg" />
+    <None Include="wwwroot\img\assets\common\form\plane.svg" />
+    <None Include="wwwroot\img\assets\dashboardBlock\bg.svg" />
+    <None Include="wwwroot\img\assets\dashboardBlock\flyRewards\inner-line.svg" />
+    <None Include="wwwroot\img\assets\dashboardBlock\flyRewards\line.svg" />
+    <None Include="wwwroot\img\assets\dashboardBlock\flyRewards\out-line.svg" />
+    <None Include="wwwroot\img\assets\dashboardBlock\profile\line-decor-1.svg" />
+    <None Include="wwwroot\img\assets\mainBlock\points-decor-mobile.svg" />
+    <None Include="wwwroot\img\general\arrow.svg" />
+    <None Include="wwwroot\img\general\close-white-2.svg" />
+    <None Include="wwwroot\img\general\close-white-mobile.svg" />
+    <None Include="wwwroot\img\general\close-white.svg" />
+    <None Include="wwwroot\img\general\close.svg" />
+    <None Include="wwwroot/img/general/up-arrow-white.svg" />
+    <None Include="wwwroot/img/general/down-arrow-white.svg" />
+    <None Include="wwwroot\img\minified-svg\add.svg" />
+    <None Include="wwwroot\img\minified-svg\aeroplane.svg" />
+    <None Include="wwwroot\img\minified-svg\aeroplane2.svg" />
+    <None Include="wwwroot\img\minified-svg\airplane.svg" />
+    <None Include="wwwroot\img\minified-svg\alarm.svg" />
+    <None Include="wwwroot\img\minified-svg\arrival.svg" />
+    <None Include="wwwroot\img\minified-svg\auction.svg" />
+    <None Include="wwwroot\img\minified-svg\box.svg" />
+    <None Include="wwwroot\img\minified-svg\calendar-aircraft.svg" />
+    <None Include="wwwroot\img\minified-svg\calendar-checked.svg" />
+    <None Include="wwwroot\img\minified-svg\calendar.svg" />
+    <None Include="wwwroot\img\minified-svg\card.svg" />
+    <None Include="wwwroot\img\minified-svg\charter-flight.svg" />
+    <None Include="wwwroot\img\minified-svg\chat.svg" />
+    <None Include="wwwroot\img\minified-svg\checked-circle.svg" />
+    <None Include="wwwroot\img\minified-svg\checked-green.svg" />
+    <None Include="wwwroot\img\minified-svg\checked.svg" />
+    <None Include="wwwroot\img\minified-svg\chronometer.svg" />
+    <None Include="wwwroot\img\minified-svg\clock.svg" />
+    <None Include="wwwroot\img\minified-svg\clock2.svg" />
+    <None Include="wwwroot\img\minified-svg\clock3.svg" />
+    <None Include="wwwroot\img\minified-svg\close.svg" />
+    <None Include="wwwroot\img\minified-svg\cloud.svg" />
+    <None Include="wwwroot\img\minified-svg\confirm.svg" />
+    <None Include="wwwroot\img\minified-svg\controls.svg" />
+    <None Include="wwwroot\img\minified-svg\decor-line.svg" />
+    <None Include="wwwroot\img\minified-svg\delete.svg" />
+    <None Include="wwwroot\img\minified-svg\departures.svg" />
+    <None Include="wwwroot\img\minified-svg\discuss.svg" />
+    <None Include="wwwroot\img\minified-svg\distance.svg" />
+    <None Include="wwwroot\img\minified-svg\double-arrows.svg" />
+    <None Include="wwwroot\img\minified-svg\double-long-arrows.svg" />
+    <None Include="wwwroot\img\minified-svg\double-plane.svg" />
+    <None Include="wwwroot\img\minified-svg\down-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\envelope.svg" />
+    <None Include="wwwroot\img\minified-svg\eye-close.svg" />
+    <None Include="wwwroot\img\minified-svg\eye-open.svg" />
+    <None Include="wwwroot\img\minified-svg\eye.svg" />
+    <None Include="wwwroot\img\minified-svg\fb.svg" />
+    <None Include="wwwroot\img\minified-svg\file.svg" />
+    <None Include="wwwroot\img\minified-svg\giftbox.svg" />
+    <None Include="wwwroot\img\minified-svg\glass.svg" />
+    <None Include="wwwroot\img\minified-svg\inst.svg" />
+    <None Include="wwwroot\img\minified-svg\left-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\line-decor-1.svg" />
+    <None Include="wwwroot\img\minified-svg\locked.svg" />
+    <None Include="wwwroot\img\minified-svg\long-down-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\long-left-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\long-up-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\mail-footer.svg" />
+    <None Include="wwwroot\img\minified-svg\mail.svg" />
+    <None Include="wwwroot\img\minified-svg\message.svg" />
+    <None Include="wwwroot\img\minified-svg\minus.svg" />
+    <None Include="wwwroot\img\minified-svg\more.svg" />
+    <None Include="wwwroot\img\minified-svg\mountains.svg" />
+    <None Include="wwwroot\img\minified-svg\moving.svg" />
+    <None Include="wwwroot\img\minified-svg\notify.svg" />
+    <None Include="wwwroot\img\minified-svg\open-folder.svg" />
+    <None Include="wwwroot\img\minified-svg\operator.svg" />
+    <None Include="wwwroot\img\minified-svg\pause.svg" />
+    <None Include="wwwroot\img\minified-svg\payment.svg" />
+    <None Include="wwwroot\img\minified-svg\pencil.svg" />
+    <None Include="wwwroot\img\minified-svg\photo-camera.svg" />
+    <None Include="wwwroot\img\minified-svg\pilot-hat.svg" />
+    <None Include="wwwroot\img\minified-svg\placeholder.svg" />
+    <None Include="wwwroot\img\minified-svg\placeholder2.svg" />
+    <None Include="wwwroot\img\minified-svg\plane-provider.svg" />
+    <None Include="wwwroot\img\minified-svg\plane.svg" />
+    <None Include="wwwroot\img\minified-svg\play-video.svg" />
+    <None Include="wwwroot\img\minified-svg\play.svg" />
+    <None Include="wwwroot\img\minified-svg\plus.svg" />
+    <None Include="wwwroot\img\minified-svg\plus2.svg" />
+    <None Include="wwwroot\img\minified-svg\plus3.svg" />
+    <None Include="wwwroot\img\minified-svg\printer.svg" />
+    <None Include="wwwroot\img\minified-svg\protection.svg" />
+    <None Include="wwwroot\img\minified-svg\right-arrow-2.svg" />
+    <None Include="wwwroot\img\minified-svg\right-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\right-long-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\send-button.svg" />
+    <None Include="wwwroot\img\minified-svg\speedometer.svg" />
+    <None Include="wwwroot\img\minified-svg\ticket.svg" />
+    <None Include="wwwroot\img\minified-svg\triangle.svg" />
+    <None Include="wwwroot\img\minified-svg\tv.svg" />
+    <None Include="wwwroot\img\minified-svg\tw.svg" />
+    <None Include="wwwroot\img\minified-svg\up-arrow.svg" />
+    <None Include="wwwroot\img\minified-svg\user-empty.svg" />
+    <None Include="wwwroot\img\minified-svg\user.svg" />
+    <None Include="wwwroot\img\minified-svg\user2.svg" />
+    <None Include="wwwroot\img\minified-svg\user3.svg" />
+    <None Include="wwwroot\img\minified-svg\users.svg" />
+    <None Include="wwwroot\img\minified-svg\wallet.svg" />
+    <None Include="wwwroot\img\minified-svg\warning.svg" />
+    <None Include="wwwroot\img\minified-svg\wifi.svg" />
+    <None Include="wwwroot\img\minified-svg\zoom.svg" />
+    <None Include="wwwroot\js\flyer.js" />
+    <None Include="wwwroot\js\home.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\main.min.js" />
+    <None Include="wwwroot\js\separate-js\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\js\shared.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\templates\settings.html">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿<div class="dashboardBlock__content" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="networkDashboard js-tabBox networkDashboard--admin">
+        <div class="networkDashboard__header">
+            <div class="networkDashboard__title">Network sign-ups</div>
+            <div class="networkDashboard__nav">
+                <div class="networkDashboard__nav-item js-tabNavItem" data-id="flyers">
+                    <span class="text">Flyers</span>
+                </div>
+                <div class="networkDashboard__nav-item js-tabNavItem" data-id="aircraft-providers">
+                    <span class="text">Aircraft Providers</span>
+                </div>
+            </div>
+            <div class="networkDashboard__button-wr js-tabContentItem" data-id="aircraft-providers">
+                <a class="networkDashboard__button js-popup" id="newAircraftProvider"><span class="text">Create</span></a>
+            </div>
+        </div>
+        <div class="networkDashboard__content">
+            <div class="networkDashboard__content-item js-tabContentItem" data-id="flyers">
+                <div class="networkDashboard__table">
+                    <div class="networkDashboard__table-header">
+                        <div class="networkDashboard__table-cell">№</div>
+                        <div class="networkDashboard__table-cell">Name</div>
+                        <div class="networkDashboard__table-cell">Email</div>
+                        <div class="networkDashboard__table-cell">Phone</div>
+                        <div class="networkDashboard__table-cell">Date/time stamp</div>
+                    </div>
+                    <div class="networkDashboard__table-body js-customScroll" id="flyersList">
+
+                    </div>
+                </div>
+            </div>
+            <div class="networkDashboard__content-item js-tabContentItem" data-id="aircraft-providers">
+                <div class="networkDashboard__table">
+                    <div class="networkDashboard__table-header">
+                        <div class="networkDashboard__table-cell">№</div>
+                        <div class="networkDashboard__table-cell">Name</div>
+                        <div class="networkDashboard__table-cell">Email</div>
+                        <div class="networkDashboard__table-cell">Phone</div>
+                        <div class="networkDashboard__table-cell">Date/time stamp</div>
+                    </div>
+                    <div class="networkDashboard__table-body js-customScroll" id="aircraftProvidersList">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

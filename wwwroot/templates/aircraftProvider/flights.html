@@ -1,0 +1,61 @@
+﻿<div class="dashboardBlock__content" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="flightsDashboard js-tabBox flightsDashboard--provider">
+        <div class="flightsDashboard__header">
+            <div class="flightsDashboard__title">Flights</div>
+            <div class="flightsDashboard__nav">
+                <div class="flightsDashboard__nav-item js-tabNavItem" data-id="current">
+                    <span class="text">Current</span>
+                </div>
+                <div class="flightsDashboard__nav-item js-tabNavItem" data-id="upcoming">
+                    <span class="text">Upcoming</span>
+                </div>
+                <div class="flightsDashboard__nav-item js-tabNavItem" data-id="historical">
+                    <span class="text">Historical</span>
+                </div>
+            </div>
+        </div>
+        <div class="flightsDashboard__content">
+            <div class="flightsDashboard__content-inner">
+                <div class="flightsDashboard__content-item js-tabContentItem js-customScroll" data-id="current">
+                    <div class="flightsDashboard__list"></div>
+                    <div class="flightsDashboard__list-item">
+                        <div class="flightsDashboard__list-item-left">
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Flight Number</div><a class="flightsDashboard__list-item-link flightNumber"></a>
+                            </div>
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Booking number</div>
+                                <div class="flightsDashboard__list-item-text bookingNumber"></div>
+                            </div>
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Departure</div>
+                                <div class="flightsDashboard__list-item-text departureLocation"></div>
+                            </div>
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Arrival</div>
+                                <div class="flightsDashboard__list-item-text arrivalLocation"></div>
+                            </div>
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Departure date, time</div>
+                                <div class="flightsDashboard__list-item-text departureDate"></div>
+                            </div>
+                            <div class="flightsDashboard__list-item-info">
+                                <div class="flightsDashboard__list-item-title">Arrival date, time</div>
+                                <div class="flightsDashboard__list-item-text arrivalDate"></div>
+                            </div>
+                        </div>
+                        <div class="flightsDashboard__list-item-right">
+                            <a class="flightsDashboard__list-item-link">See full flight detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flightsDashboard__content-item js-tabContentItem js-customScroll" data-id="upcoming">
+                    <div class="flightsDashboard__list"></div>
+                </div>
+                <div class="flightsDashboard__content-item js-tabContentItem js-customScroll" data-id="historical">
+                    <div class="flightsDashboard__list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

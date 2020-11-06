@@ -1,0 +1,421 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+  <div class="tabsDashboard">
+    <div class="tabsDashboard__header">
+      <div class="tabsDashboard__title">Customize your dashboard</div>
+      <div class="tabsDashboard__text">You can put any desired tab on the dashboard. Just drag it from the left vertical menu</div>
+    </div>
+    <ul class="tabsDashboard__content js-tab-list">
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="requests">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>Aircraft provider</b> requests</div>
+            <div class="tabsDashboard__tab-icon">
+              <svg class="icon__discuss" width="17px" height="17px">
+                <use xlink:href="#discuss"></use>
+              </svg>
+              <span class="tabsDashboard__tab-icon-count" id="provider_request_icon_count"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__requests" id="provider_request_tab">
+            <div class="tabsDashboard__empty js-request-empty">no requests</div>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="network">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>New sign ups</b> / Flyers</div>
+            <div class="tabsDashboard__tab-icon">
+              <svg class="icon__network" width="18px" height="18px">
+                <use xlink:href="#network"></use>
+              </svg>
+              <span id="new-flyer-notification-count" class="tabsDashboard__tab-icon-count"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__network" id="network_tab">
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="flights">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>Upcoming</b> and <b>historical</b> charters and flights</div>
+            <div class="tabsDashboard__tab-icon">
+              <svg class="icon__distance" width="19px" height="19px">
+                <use xlink:href="#distance"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__flights tabsDashboard__flights--admin">
+            <a class="tabsDashboard__flights-item" href="flightsAPDashboard.html">
+              <div class="tabsDashboard__flights-circle tabsDashboard__flights-circle--upcoming">
+                <div class="tabsDashboard__flights-circle-line">
+                  <svg width="136" height="136" viewBox="0 0 136 136" fill="none">
+                    <circle cx="68" cy="68" r="67.5" stroke="url(#upcoming)" stroke-dasharray="3 3" />
+                    <defs>
+                    <linearGradient id="upcoming" x1="68" y1="0" x2="68" y2="136" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#292931" />
+                    <stop offset="1" stop-color="#45454F" />
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="tabsDashboard__flights-circle-inner"><span class="tabsDashboard__flights-circle-inner-value">17</span>
+                </div>
+              </div>
+              <div class="tabsDashboard__flights-title">Upcoming flights</div>
+              <div class="tabsDashboard__flights-link">See flights</div>
+            </a>
+            <a class="tabsDashboard__flights-item" href="flightsAPDashboard.html">
+              <div class="tabsDashboard__flights-circle tabsDashboard__flights-circle--active">
+                <div class="tabsDashboard__flights-circle-line">
+                  <svg width="136" height="136" viewBox="0 0 136 136" fill="none">
+                    <circle cx="68" cy="68" r="67.5" stroke="url(#active)" stroke-dasharray="3 3" />
+                    <defs>
+                    <linearGradient id="active" x1="68" y1="0" x2="68" y2="136" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#41FB96" />
+                    <stop offset="1" stop-color="#12A053" />
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="tabsDashboard__flights-circle-inner"><span class="tabsDashboard__flights-circle-inner-value">2</span>
+                </div>
+              </div>
+              <div class="tabsDashboard__flights-title">Active flights</div>
+              <div class="tabsDashboard__flights-link">See flights</div>
+            </a>
+            <a class="tabsDashboard__flights-item" href="flightsAPDashboard.html">
+              <div class="tabsDashboard__flights-circle tabsDashboard__flights-circle--past">
+                <div class="tabsDashboard__flights-circle-line">
+                  <svg width="136" height="136" viewBox="0 0 136 136" fill="none">
+                    <circle cx="68" cy="68" r="67.5" stroke="url(#past)" stroke-dasharray="3 3" />
+                    <defs>
+                    <linearGradient id="past" x1="68" y1="0" x2="68" y2="136" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#292931" />
+                    <stop offset="1" stop-color="#45454F" />
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="tabsDashboard__flights-circle-inner"><span class="tabsDashboard__flights-circle-inner-value">5</span>
+                </div>
+              </div>
+              <div class="tabsDashboard__flights-title">Past flights</div>
+              <div class="tabsDashboard__flights-link">See flights</div>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="booking-confirm">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>Booking confirmations</b>
+            </div>
+            <div class="tabsDashboard__tab-icon">
+              <svg class="icon__checked-circle" width="21px" height="21px">
+                <use xlink:href="#checked-circle"></use>
+              </svg>
+              <span class="tabsDashboard__tab-icon-count js-booking-count">2</span>
+            </div>
+          </div>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__booking">
+            <div class="tabsDashboard__empty js-booking-empty">no booking</div>
+            <div class="tabsDashboard__booking-item js-booking-item">
+              <div class="tabsDashboard__booking-route"><span class="text">New York City</span><span class="icon">
+                  <svg class="icon__double-long-arrows" width="24px" height="15px">
+                    <use xlink:href="#double-long-arrows"></use>
+                  </svg>
+                </span><span class="text">San Francisco</span>
+              </div>
+              <div class="tabsDashboard__booking-button-wr">
+                <div class="tabsDashboard__booking-button tabsDashboard__booking-button--confirm js-booking-confirm">
+                  <svg class="icon__checked" width="19px" height="19px">
+                    <use xlink:href="#checked"></use>
+                  </svg>
+                </div>
+                <a class="tabsDashboard__booking-button tabsDashboard__booking-button--remove js-booking-remove" href="#questionPopup">
+                  <svg class="icon__close" width="17px" height="17px">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="tabsDashboard__booking-date">December 31, 2018 - January 7, 2019</div>
+            </div>
+            <div class="tabsDashboard__booking-item js-booking-item">
+              <div class="tabsDashboard__booking-route"><span class="text">Republic Airport (KFRG)</span><span class="icon">
+                  <svg class="icon__right-long-arrow" width="23px" height="8px">
+                    <use xlink:href="#right-long-arrow"></use>
+                  </svg>
+                </span><span class="text">Orlando International Airport (KMCO)</span>
+              </div>
+              <div class="tabsDashboard__booking-button-wr">
+                <div class="tabsDashboard__booking-button tabsDashboard__booking-button--confirm js-booking-confirm">
+                  <svg class="icon__checked" width="19px" height="19px">
+                    <use xlink:href="#checked"></use>
+                  </svg>
+                </div>
+                <a class="tabsDashboard__booking-button tabsDashboard__booking-button--remove js-booking-remove" href="#questionPopup">
+                  <svg class="icon__close" width="17px" height="17px">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="tabsDashboard__booking-date">January 11, 2019 - January 17, 2019</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="booking-list">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>Booking</b>
+            </div>
+          </div><a class="tabsDashboard__tab-link" href="#">To see full details</a>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__booking">
+            <div class="tabsDashboard__booking-table"></div>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="messages">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text">New <b>messages</b>
+            </div>
+            <div class="tabsDashboard__tab-icon">
+              <svg class="icon__mail" width="23px" height="23px">
+                <use xlink:href="#mail"></use>
+              </svg>
+              <span class="tabsDashboard__tab-icon-count">2</span>
+            </div>
+          </div><a class="tabsDashboard__tab-link" href="&quot;messagesAPDashboard.html">See all</a>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__messages">
+            <div class="tabsDashboard__messages-item">
+              <div class="tabsDashboard__messages-header">
+                <div class="tabsDashboard__messages-avatar" style="background-image:url('/img/assets/dashboardBlock/tabs/avatar.jpg')"></div>
+                <div class="tabsDashboard__messages-caption">
+                  <div class="tabsDashboard__messages-name">John Doe, XYZ</div>
+                  <div class="tabsDashboard__messages-subject">(Aviation / FLYJETS)</div>
+                  <div class="tabsDashboard__messages-time">3:30 PM</div>
+                </div>
+              </div>
+              <div class="tabsDashboard__messages-content">
+                <div class="tabsDashboard__messages-text">Hi Jessica, The tail number for your upcoming flight is N123XYZ. We have confirmed take-off at 3pm - 15:00:00 EST - on Sunday, September 2, 2018...</div><a class="tabsDashboard__messages-link"
+                                                                                                                                                                                                                      href="&quot;messagesAPDashboard.html">read more</a>
+              </div>
+            </div>
+            <div class="tabsDashboard__messages-item">
+              <div class="tabsDashboard__messages-header">
+                <div class="tabsDashboard__messages-avatar tabsDashboard__messages-avatar--square" style="background-image:url('/img/assets/dashboardBlock/tabs/world.png')"></div>
+                <div class="tabsDashboard__messages-caption">
+                  <div class="tabsDashboard__messages-name">Message center</div>
+                  <div class="tabsDashboard__messages-subject">Response to your appeal</div>
+                  <div class="tabsDashboard__messages-time">1:30 PM</div>
+                </div>
+              </div>
+              <div class="tabsDashboard__messages-content">
+                <div class="tabsDashboard__messages-text">Hi Jessica, The tail number for your upcoming flight is N123XYZ. We have confirmed take-off at 3pm - 15:00:00 EST - on Sunday, September 2, 2018...</div><a class="tabsDashboard__messages-link"
+                                                                                                                                                                                                                      href="&quot;messagesAPDashboard.html">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab js-tab-item" style="display: none" data-type="auctions">
+        <div class="tabsDashboard__tab-remove js-tab-remove"><span class="icon">
+            <svg class="icon__close" width="17px" height="17px">
+              <use xlink:href="#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="tabsDashboard__tab-header">
+          <div class="tabsDashboard__tab-title">
+            <div class="tabsDashboard__tab-text"><b>Auctions: offers</b>
+            </div>
+          </div>
+        </div>
+        <div class="tabsDashboard__tab-inner">
+          <div class="tabsDashboard__auctions">
+            <div class="tabsDashboard__auctions-info"><span class="icon">
+                <svg class="icon__triangle" width="24px" height="24px">
+                  <use xlink:href="#triangle"></use>
+                </svg>
+              </span><span class="text">Auction in process</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="tabsDashboard__tab tabsDashboard__tab--add">
+        <div class="tabsDashboard__add js-acc-item">
+          <div class="tabsDashboard__add-header js-acc-title">
+            <div class="tabsDashboard__add-title">add new tab</div>
+            <div class="tabsDashboard__add-icon">
+              <svg width="17" height="17" viewBox="0 0 17 17">
+                <path d="M8.5 0C3.81323 0 0 3.8129 0 8.5C0 13.1871 3.81323 17 8.5 17C13.1868 17 17 13.1871 17 8.5C17 3.8129 13.1868 0 8.5 0ZM8.5 16.3462C4.17383 16.3462 0.653846 12.8262 0.653846 8.5C0.653846 4.17383 4.17383 0.653846 8.5 0.653846C12.8262 0.653846 16.3462 4.17383 16.3462 8.5C16.3462 12.8262 12.8262 16.3462 8.5 16.3462Z"></path>
+                <circle cx="8.5" cy="8.5" r="8.5"></circle>
+                <path d="M12.5859 8.17308H8.82632V4.57692C8.82632 4.39613 8.67986 4.25 8.4994 4.25C8.31894 4.25 8.17248 4.39613 8.17248 4.57692V8.17308H4.41286C4.2324 8.17308 4.08594 8.31921 4.08594 8.5C4.08594 8.68079 4.2324 8.82692 4.41286 8.82692H8.17248V12.75C8.17248 12.9308 8.31894 13.0769 8.4994 13.0769C8.67986 13.0769 8.82632 12.9308 8.82632 12.75V8.82692H12.5859C12.7664 8.82692 12.9129 8.68079 12.9129 8.5C12.9129 8.31921 12.7664 8.17308 12.5859 8.17308Z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="tabsDashboard__add-content js-acc-content">
+            <div class="tabsDashboard__add-list">
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="profile">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__user2" width="16px" height="16px">
+                    <use xlink:href="#user2"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Profile</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="network">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__network" width="18px" height="18px">
+                    <use xlink:href="#network"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Network activity</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="requests">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__discuss" width="17px" height="17px">
+                    <use xlink:href="#discuss"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Aircraft provider requests</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="requests">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__calendar-aircraft" width="19px" height="19px">
+                    <use xlink:href="#calendar-aircraft"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Flight requests</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="flights">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__distance" width="19px" height="19px">
+                    <use xlink:href="#distance"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Flights</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="auctions">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__auction" width="16px" height="16px">
+                    <use xlink:href="#auction"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Auctions</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="booking-list">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__ticket" width="23px" height="23px">
+                    <use xlink:href="#ticket"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Booking list</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="booking-confirm">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__checked-circle" width="21px" height="21px">
+                    <use xlink:href="#checked-circle"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Confirm manual booking</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="requests-live">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__armchair" width="19px" height="19px">
+                    <use xlink:href="#armchair"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Live seat requests</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="fleet">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__plane-provider" width="19px" height="19px">
+                    <use xlink:href="#plane-provider"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Aircraft uploads</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="charter-uploads">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__world" width="21px" height="21px">
+                    <use xlink:href="#world"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Charter uploads</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="flight-uploads">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__aeroplane2" width="21px" height="21px">
+                    <use xlink:href="#aeroplane2"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Flight uploads</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="flyRewards">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__giftbox" width="18px" height="18px">
+                    <use xlink:href="#giftbox"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">FLY<b>Rewards</b></span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="payment">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__wallet" width="18px" height="18px">
+                    <use xlink:href="#wallet"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Sell, legs, seats</span>
+              </div>
+              <div class="tabsDashboard__add-list-item js-tab-add" data-type="messages">
+                <span class="tabsDashboard__add-list-icon">
+                  <svg class="icon__message" width="25px" height="25px">
+                    <use xlink:href="#message"></use>
+                  </svg>
+                </span><span class="tabsDashboard__add-list-text">Messages</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

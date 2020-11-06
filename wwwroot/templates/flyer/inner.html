@@ -1,0 +1,130 @@
+﻿<div class="box box--dashboardBlock">
+    <div class="box__inner">
+        <div class="dashboardBlock dashboardBlock--profile dashboardBlock--flyer">
+            <div class="dashboardBlock__sidebar js-customScroll">
+                <div class="dashboardBlock__nav">
+                    <div class="dashboardBlock__nav-item" data-tab="dashboard">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)"><span class="dashboardBlock__nav-text">Dashboard</span></a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="profile">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__user2" width="16px" height="16px">
+                                    <use xlink:href="#user2"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Profile</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="flights">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__distance" width="19px" height="19px">
+                                    <use xlink:href="#distance"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Flights<br><i>upcoming and historical</i></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="bookings">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)" data-type="booking-list">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Confirmed Bookings</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="flightsReqs">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__calendar-aircraft" width="19px" height="19px">
+                                    <use xlink:href="#calendar-aircraft"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Manual Requests</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="settings">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__locked" width="17px" height="17px">
+                                    <use xlink:href="#locked"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Settings &amp; security</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="iddocs">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__card" width="19px" height="19px">
+                                    <use xlink:href="#card"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Passenger identification</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="rewards">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__giftbox" width="18px" height="18px">
+                                    <use xlink:href="#giftbox"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">FLY<b>Rewards</b></span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="payMethods">
+                        <a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__wallet" width="18px" height="18px">
+                                    <use xlink:href="#wallet"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Payment information</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="routealerts">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__alarm" width="17px" height="17px">
+                                    <use xlink:href="#alarm"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Route alerts</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="messages">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__message" width="25px" height="25px">
+                                    <use xlink:href="#message"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Messages</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="requests">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__discuss" width="17px" height="17px">
+                                    <use xlink:href="#discuss"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Requests</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="auctions">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__auction" width="16px" height="16px">
+                                    <use xlink:href="#auction"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Auctions bids</span>
+                        </a>
+                    </div>
+                    <div class="dashboardBlock__nav-item" data-tab="sellseats">
+                        <a class="dashboardBlock__nav-link js-popup" href="#comingSoonPopup" draggable="true" ondragstart="return dashboardDragStart(event)">
+                            <span class="dashboardBlock__nav-icon">
+                                <svg class="icon__ticket" width="23px" height="23px">
+                                    <use xlink:href="#ticket"></use>
+                                </svg>
+                            </span><span class="dashboardBlock__nav-text">Sell seats</span>
+                        </a>
+                    </div>
+                </div><a class="dashboardBlock__sidebar-link js-popup" href="#comingSoonPopup">Switch from <b>FLYER</b> to <b>AIRCRAFT PROVIDER</b> login</a>
+            </div>
+        </div>
+    </div>
+</div>

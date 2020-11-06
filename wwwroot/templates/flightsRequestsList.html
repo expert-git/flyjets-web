@@ -1,0 +1,292 @@
+﻿<div class="dashboardBlock__content" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="requestsDashboard requestsDashboard--admin js-tabRequests">
+        <div class="requestsDashboard__header">
+            <div class="requestsDashboard__title">Flight requests by date and time</div>
+            <div class="requestsDashboard__nav">
+                <div class="requestsDashboard__nav-item js-tabRequestsNavItem active" data-id="current">
+                    <span class="text">Current</span>
+                </div>
+                <div class="requestsDashboard__nav-item js-tabRequestsNavItem" data-id="historical">
+                    <span class="text">Historical</span>
+                </div>
+            </div>
+        </div>
+        <div class="requestsDashboard__content">
+            <div class="requestsDashboard__content-inner js-customScroll">
+                <div class="requestsDashboard__content-item js-tabRequestsContentItem active" data-id="current" style="display: block;">
+                    <div class="requestsDashboard__content-item-inner">
+                        <div class="requestsDashboard__table js-request-list requestsDashboard__table--current">
+                            <div class="requestsDashboard__empty js-request-empty">no requests</div>
+                            <div class="requestsDashboard__table-header js-request-header">
+                                <div class="requestsDashboard__table-cell">№</div>
+                                <div class="requestsDashboard__table-cell">Name</div>
+                                <div class="requestsDashboard__table-cell">Date/time stamp</div>
+                                <div class="requestsDashboard__table-cell">Take off</div>
+                                <div class="requestsDashboard__table-cell">Land</div>
+                            </div>
+                            <div class="requestsDashboard__table-body js-customScroll">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="requestsDashboard__content-item js-tabRequestsContentItem" data-id="historical">
+                    <div class="requestsDashboard__content-item-inner">
+                        <div class="requestsDashboard__table js-request-list requestsDashboard__table--historical">
+                            <div class="requestsDashboard__empty js-request-empty">no requests</div>
+                            <div class="requestsDashboard__table-header js-request-header">
+                                <div class="requestsDashboard__table-cell">№</div>
+                                <div class="requestsDashboard__table-cell">Name</div>
+                                <div class="requestsDashboard__table-cell">Date/time stamp</div>
+                                <div class="requestsDashboard__table-cell">Take off</div>
+                                <div class="requestsDashboard__table-cell">Land</div>
+                            </div>
+                            <div class="requestsDashboard__table-body js-customScroll">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="requestsDashboardDetail" id="flightRequestDetails">
+    <div class="requestsDashboardDetail__inner">
+        <div class="requestsDashboardDetail__title">
+            Additional info
+            <br>for the manual flight request
+        </div>
+        <div class="requestsDashboardDetail__info">
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Number</div>
+                <div class="requestsDashboardDetail__info-item-value number"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Name</div>
+                <div class="requestsDashboardDetail__info-item-value requesterName"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Direction</div>
+                <div class="requestsDashboardDetail__info-item-value direction"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Booking Type</div>
+                <div class="requestsDashboardDetail__info-item-value bookingType"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Take off</div>
+                <div class="requestsDashboardDetail__info-item-value departure"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Land</div>
+                <div class="requestsDashboardDetail__info-item-value arrival"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">From</div>
+                <div class="requestsDashboardDetail__info-item-value departureDate"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">To</div>
+                <div class="requestsDashboardDetail__info-item-value returnDate"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Passengers</div>
+                <div class="requestsDashboardDetail__info-item-value paxNo"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Aircraft type</div>
+                <div class="requestsDashboardDetail__info-item-value aircraftType"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Price range</div>
+                <div class="requestsDashboardDetail__info-item-value priceRange"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Status</div>
+                <div class="requestsDashboardDetail__info-item-value requestStatus"></div>
+            </div>
+            <div class="requestsDashboardDetail__info-item">
+                <div class="requestsDashboardDetail__info-item-title">Request Date</div>
+                <div class="requestsDashboardDetail__info-item-value requestDate"></div>
+            </div>
+        </div>
+        <div class="requestsDashboardDetail__bottom">
+            <a class="requestsDashboardDetail__link" id="newBooking">New Booking</a>
+        </div>
+    </div>
+</div>
+<div class="newBookingPopup" id="newBookingPopup">
+    <div class="newBookingPopup__inner">
+        <div class="newBookingPopup__title">Create new booking</div>
+        <div class="newBookingPopup__form">
+            <form class="form form--newBooking js-ajaxForm" action="" method="post" data-href="/json/test.json" data-action="newBooking" id="newBookingForm" onsubmit="return false;">
+                <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft Provider:</div>
+                    <div class="form__field-wrapper">
+                        <input class="form__field js-typeahead" type="text" name="aircraftProvider" placeholder="Enter here" required>
+                    </div>
+                </label>
+                <label class="form__label form__label--text">
+                    <div class="form__caption">Aircraft tail number:</div>
+                    <div class="form__field-wrapper">
+                        <input class="form__field js-typeahead" type="text" name="aircraftTailNumber" placeholder="Enter here" required>
+                    </div>
+                </label>
+                <label class="form__label form__label--number js-counter">
+                    <div class="form__caption">Pax No:</div>
+                    <div class="form__field-wrapper">
+                        <div class="form__icon">
+                            <svg class="icon__users" width="27px" height="27px">
+                                <use xlink:href="#users"></use>
+                            </svg>
+                        </div>
+                        <input class="form__field js-counter-input" type="number" name="pax" min="1" max="99" value="" required>
+                        <div class="form__arrow">
+                            <div class="form__arrow-plus js-counter-plus">
+                                <svg class="icon__up-arrow" width="33px" height="33px">
+                                    <use xlink:href="#up-arrow"></use>
+                                </svg>
+                            </div>
+                            <div class="form__arrow-minus js-counter-minus">
+                                <svg class="icon__down-arrow" width="33px" height="33px">
+                                    <use xlink:href="#down-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <div class="form__labelGroup form__labelGroup--checkbox">
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" name="booking-type" checked="checked" value="charter aircraft"><span class="form__checkbox-icon"></span><span class="form__checkbox-caption">Book charter aircraft</span>
+                    </label>
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" name="booking-type" value="charter seat"><span class="form__checkbox-icon"></span><span class="form__checkbox-caption">Book charter seat</span>
+                    </label>
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__checkbox" type="checkbox" name="booking-type" value="commercial seat"><span class="form__checkbox-icon"></span><span class="form__checkbox-caption">Book commercial seat</span>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--radio">
+                    <label class="form__label form__label--radio">
+                        <input class="form__radio js-changeWay" type="radio" name="type" checked="checked" value="2"><span class="form__radio-box">One-way</span><span class="form__radio-icon">
+                            <svg class="icon__plane" width="12px" height="12px">
+                                <use xlink:href="#plane"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="form__label form__label--radio">
+                        <input class="form__radio js-changeWay" type="radio" name="type" value="1"><span class="form__radio-box">Round-trip</span><span class="form__radio-icon">
+                            <svg class="icon__double-plane" width="20px" height="20px">
+                                <use xlink:href="#double-plane"></use>
+                            </svg>
+                        </span>
+                    </label>
+                </div>
+                <div class="form__tab js-tabBox">
+                    <div class="form__tab-nav">
+                        <div class="form__tab-nav-item js-tabNavItem active" data-id="outbound">
+                            <span class="icon">
+                                <svg class="icon__departures" width="21px" height="21px">
+                                    <use xlink:href="#departures"></use>
+                                </svg>
+                            </span><span class="text">Outbound</span>
+                        </div>
+                        <div class="form__tab-nav-item js-tabNavItem" data-id="inbound">
+                            <span class="icon">
+                                <svg class="icon__arrival" width="21px" height="21px">
+                                    <use xlink:href="#arrival"></use>
+                                </svg>
+                            </span><span class="text">Inbound</span>
+                        </div>
+                    </div>
+                    <div class="form__tab-content">
+                        <div class="form__tab-content-item js-tabContentItem" data-id="outbound">
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Departure airport:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-typeahead" data-outbound="true" type="text" name="outboundDeparture" placeholder="Take off" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Departure FBO Location:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="text" name="outboundFboLocation" placeholder="Type here" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Arrival airport:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-typeahead" type="text" name="outboundArrival" placeholder="Land" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--date">
+                                <div class="form__caption">Dates and time:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-gmi-datepicker" type="text" name="outboundDate" placeholder="click to change" size="7" required>
+                                    <div class="form__icon">
+                                        <svg class="icon__calendar" width="17px" height="17px">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form__tab-content-item js-tabContentItem" data-id="inbound">
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Departure airport:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-typeahead" type="text" data-outbound="false" name="inboundDeparture" placeholder="Take off" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Departure FBO Location:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="text" name="inboundFboLocation" placeholder="Type here" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Arrival airport:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-typeahead" type="text" name="inboundArrival" placeholder="Land" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--date">
+                                <div class="form__caption">Dates and time:</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field js-gmi-datepicker" type="text" name="inboundDate" placeholder="click to change" size="7" required>
+                                    <div class="form__icon">
+                                        <svg class="icon__calendar" width="17px" height="17px">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <label class="form__label form__label--price price">
+                    <div class="form__caption">Booking Cost:</div>
+                    <div class="form__field-wrapper">
+                        <input class="form__field" type="text" name="cost" placeholder="Enter price in $" autocomplete="off" required>
+                    </div>
+                </label>
+                <div class="form__label form__label--button">
+                    <div class="spinner">
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                        <div class="spinner__item"></div>
+                    </div>
+                    <button class="form__button" type="button" id="createOfflineBooking">
+                        <span class="text">Complete</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

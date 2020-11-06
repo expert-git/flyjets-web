@@ -1,0 +1,81 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="profileDashboard profileDashboard--provider">
+        <div class="profileDashboard__left">
+            <form class="profileDashboard__form-info js-profileForm" action="" data-href="/json/test.json" data-action="providerProfile" method="post" id="providerProfileForm" onsubmit="return false;">
+                <div class="profileDashboard__section">
+                    <div class="profileDashboard__header">
+                        <div class="profileDashboard__title">Profile Information</div>
+                        <div class="profileDashboard__change js-editForm">Change info</div>
+                        <button class="profileDashboard__button js-submitForm" type="button" id="saveProfile">
+                            <span class="text">Save</span>
+                        </button>
+                    </div>
+                    <div class="profileDashboard__content">
+                        <div class="profileDashboard__upload">
+                            <div class="profileDashboard__avatar empty js-avatar">
+                                <label>
+                                    <input class="js-avatar-edit" type="file" name="upload-avatar" accept="image/*" value="">
+                                    <div class="profileDashboard__avatar-img js-avatar-img">
+                                        <span class="profileDashboard__avatar-icon">
+                                            <svg class="icon__photo-camera" width="18px" height="18px">
+                                                <use xlink:href="#photo-camera"></use>
+                                            </svg>
+                                        </span><span class="profileDashboard__avatar-caption">Upload photo</span>
+                                    </div>
+                                    <div class="profileDashboard__avatar-change">Change photo</div>
+                                </label>
+                                <div class="profileDashboard__avatar-crop js-avatar-crop">
+                                    <button class="profileDashboard__avatar-button" type="button">
+                                        <div class="text">Crop photo</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profileDashboard__personal-info">
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">First Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="firstName" id="firstName" placeholder="enter name*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Middle Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="middleName" id="middleName" placeholder="" value="">
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Last Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="lastName" id="lastName" placeholder="enter name*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Birth:</div>
+                                <input class="profileDashboard__personal-info-field js-datepicker" type="text" name="dateOfBirth" id="dateOfBirth" placeholder="enter date*" value="" autocomplete="off" readonly required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Email:</div>
+                                <input class="profileDashboard__personal-info-field" type="email" name="email" id="email" placeholder="enter email*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">phone:</div>
+                                <input class="profileDashboard__personal-info-field phone" type="text" name="mobile" id="mobile" placeholder="enter phone*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Company name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="companyName" id="companyName" placeholder="enter name*" value="">
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Work Email:</div>
+                                <input class="profileDashboard__personal-info-field" type="email" name="companyEmail" id="companyEmail" placeholder="enter email*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Work phone:</div>
+                                <input class="profileDashboard__personal-info-field phone" type="text" name="companyPhone" id="companyPhone" placeholder="enter phone*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Work address:</div>
+                                <textarea class="profileDashboard__personal-info-field" type="textarea" name="companyAddress" id="companyAddress" placeholder="enter address*" required></textarea>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

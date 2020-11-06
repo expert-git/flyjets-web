@@ -1,0 +1,237 @@
+﻿<div class="box box--mapBlock" id="searchFlightsResultsBlock">
+    <div class="box__inner">
+        <div class="mapBlock js-tabBox mapBlock--results">
+            <div class="mapBlock__header">
+                <div class="mapBlock__header-top">
+                    <div class="mapBlock__header-inner">
+                        <div class="mapBlock__info">
+                            <div class="mapBlock__info-left">
+                                <div class="mapBlock__info-title">Search:</div><a class="mapBlock__info-link editSearch">edit search</a>
+                            </div>
+                            <div class="mapBlock__info-right">
+                                <div class="mapBlock__info-list">
+                                    <div class="mapBlock__info-list-item mapBlock__info-list-item--route">
+                                        <div class="mapBlock__info-list-icon">
+                                            <svg class="icon__placeholder" width="21px" height="21px">
+                                                <use xlink:href="#placeholder"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="mapBlock__info-list-text">
+                                            <span id="departureName"></span><span class="arrow">
+                                                <svg class="icon__long-left-arrow" width="12px" height="12px">
+                                                    <use xlink:href="#long-left-arrow"></use>
+                                                </svg>
+                                            </span><span id="arrivalName"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mapBlock__info-list-item mapBlock__info-list-item--way">
+                                        <div class="mapBlock__info-list-icon">
+                                            <svg class="icon__airplane" width="20px" height="20px">
+                                                <use xlink:href="#airplane"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="mapBlock__info-list-text" id="directionText"></div>
+                                    </div>
+                                    <div class="mapBlock__info-list-item mapBlock__info-list-item--date">
+                                        <div class="mapBlock__info-list-icon">
+                                            <svg class="icon__calendar" width="17px" height="17px">
+                                                <use xlink:href="#calendar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="mapBlock__info-list-text" id="depRetDates"></div>
+                                    </div>
+                                    <div class="mapBlock__info-list-item mapBlock__info-list-item--count">
+                                        <div class="mapBlock__info-list-icon">
+                                            <svg class="icon__user" width="17px" height="17px">
+                                                <use xlink:href="#user"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="mapBlock__info-list-text" id="pax"></div>
+                                    </div>
+                                    <div class="mapBlock__info-list-item mapBlock__info-list-item--type">
+                                        <div class="mapBlock__info-list-icon">
+                                            <svg class="icon__charter-flight" width="17px" height="17px">
+                                                <use xlink:href="#charter-flight"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="mapBlock__info-list-text" id="bookingTypes"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mapBlock__sort">
+                            <div class="mapBlock__sort-title">Sort by:</div>
+                            <div class="mapBlock__sort-form">
+                                <form class="form form--sortSearchResults js-ajaxForm" action="" method="post" data-href="/" data-action="sortSearchResults" id="sortSearchResults" onsubmit="return false;">
+                                    <label class="form__label form__label--radio price">
+                                        <input class="form__radio" type="radio" name="sort" checked="checked" value="price up"><span class="form__radio-box">Price</span><span class="form__radio-icon">
+                                            <svg class="icon__long-up-arrow" width="11px" height="11px">
+                                                <use xlink:href="#long-up-arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="form__label form__label--radio price">
+                                        <input class="form__radio" type="radio" name="sort" value="price down"><span class="form__radio-box">Price</span><span class="form__radio-icon">
+                                            <svg class="icon__long-down-arrow" width="11px" height="11px">
+                                                <use xlink:href="#long-down-arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="form__label form__label--radio">
+                                        <input class="form__radio" type="radio" name="sort" value="aircraft type"><span class="form__radio-box">Aircraft type</span>
+                                    </label>
+                                    <label class="form__label form__label--radio">
+                                        <input class="form__radio" type="radio" name="sort" value="safety rating"><span class="form__radio-box">Safety Rating</span>
+                                    </label>
+                                    <label class="form__label form__label--radio">
+                                        <input class="form__radio" type="radio" name="sort" value="trip time"><span class="form__radio-box">Trip Time</span>
+                                    </label>
+                                    <label class="form__label form__label--radio">
+                                        <input class="form__radio" type="radio" name="sort" value="non-stop/number stops"><span class="form__radio-box">Non-stop / Number Stops</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapBlock__header-bottom">
+                    <div class="mapBlock__tab-nav">
+                        <div class="mapBlock__tab-nav-item js-tabNavItem" data-id="charterAircraft">
+                            <span class="text">Charter aircraft</span>
+                        </div>
+                        <div class="mapBlock__tab-nav-item js-tabNavItem" data-id="charterFlights">
+                            <span class="text">Charter flights</span>
+                        </div>
+                        <div class="mapBlock__tab-nav-item js-tabNavItem" data-id="charterAircraftSeats">
+                            <span class="text">Charter aircraft seats</span>
+                        </div>
+                        <div class="mapBlock__tab-nav-item js-tabNavItem" data-id="charterFlightSeats">
+                            <span class="text">Charter flights seats</span>
+                        </div>
+                        <div class="mapBlock__tab-nav-item js-tabNavItem" data-id="commercialSeats">
+                            <span class="text">Commercial seats</span>
+                        </div>
+                        <div class="form__label form__label--button">
+                          <a id="manual-request" class="mapBlock__results-list-item-button mapBlock__results-list-item-button--green bookBtn">Manual Req.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mapBlock__content">
+                <div class="mapBlock__bg"></div>
+                <div class="mapBlock__map" id="googleMap"></div>
+                <div class="mapBlock__sidebar open">
+                    <a class="mapBlock__sidebar-title editSearch">
+                        <div class="mapBlock__sidebar-title-inner">
+                            <span class="text">Map</span><span class="icon">
+                                <svg class="icon__down-arrow" width="33px" height="33px">
+                                    <use xlink:href="#down-arrow"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="mapBlock__sidebar-content">
+                        <div class="mapBlock__tab-content">
+                            <div class="mapBlock__tab-content-item js-tabContentItem" data-id="charterAircraft">
+                                <div class="mapBlock__tab-content-inner">
+                                    <div class="mapBlock__results-list js-customScroll">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapBlock__tab-content-item js-tabContentItem" data-id="charterAircraftSeats">
+                                <div class="mapBlock__tab-content-inner">
+                                    <div class="mapBlock__results-list js-customScroll">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapBlock__tab-content-item js-tabContentItem" data-id="charterFlights">
+                                <div class="mapBlock__tab-content-inner">
+                                    <div class="mapBlock__results-list js-customScroll">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapBlock__tab-content-item js-tabContentItem" data-id="charterFlightSeats">
+                                <div class="mapBlock__tab-content-inner">
+                                    <div class="mapBlock__results-list js-customScroll">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapBlock__tab-content-item js-tabContentItem" data-id="commercialSeats">
+                                <div class="mapBlock__tab-content-inner">
+                                    <div class="mapBlock__results-form">
+                                        <form class="form form--filterSearchResults js-ajaxForm" action="" method="post" data-href="/" data-action="filterSearchResults" id="filterSearchResults" onsubmit="return false;">
+                                            <div class="form__title">Enter clarifications:</div>
+                                            <label class="form__label form__label--number js-counter">
+                                                <div class="form__field-wrapper">
+                                                    <div class="form__caption">Adult</div>
+                                                    <input class="form__field js-counter-input" type="number" name="adult" min="1" max="99" value="2" required>
+                                                    <div class="form__arrow">
+                                                        <div class="form__arrow-plus js-counter-plus">
+                                                            <svg class="icon__up-arrow" width="33px" height="33px">
+                                                                <use xlink:href="#up-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="form__arrow-minus js-counter-minus">
+                                                            <svg class="icon__down-arrow" width="33px" height="33px">
+                                                                <use xlink:href="#down-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="form__label form__label--number js-counter">
+                                                <div class="form__field-wrapper">
+                                                    <div class="form__caption">Children</div>
+                                                    <input class="form__field js-counter-input" type="number" name="children" min="1" max="99" value="2" required>
+                                                    <div class="form__arrow">
+                                                        <div class="form__arrow-plus js-counter-plus">
+                                                            <svg class="icon__up-arrow" width="33px" height="33px">
+                                                                <use xlink:href="#up-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="form__arrow-minus js-counter-minus">
+                                                            <svg class="icon__down-arrow" width="33px" height="33px">
+                                                                <use xlink:href="#down-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <div class="form__labelGroup">
+                                                <div class="form__caption">Pet</div>
+                                                <label class="form__label form__label--radio">
+                                                    <input class="form__radio" type="radio" name="pet" value="yes"><span class="form__radio-box">Yes</span>
+                                                </label>
+                                                <label class="form__label form__label--radio">
+                                                    <input class="form__radio" type="radio" name="pet" checked="checked" value="no"><span class="form__radio-box">No</span>
+                                                </label>
+                                            </div>
+                                            <div class="form__labelGroup">
+                                                <label class="form__label form__label--checkbox">
+                                                    <input class="form__checkbox" type="checkbox" name="class" value="first"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">First class</span>
+                                                </label>
+                                                <label class="form__label form__label--checkbox">
+                                                    <input class="form__checkbox" type="checkbox" name="class" value="business"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Business class</span>
+                                                </label>
+                                                <label class="form__label form__label--checkbox">
+                                                    <input class="form__checkbox" type="checkbox" name="class" value="economy"><i class="form__checkbox-icon"></i><span class="form__checkbox-box">Economy class</span>
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="mapBlock__results-list js-customScroll">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,322 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="availabilityDashboard availabilityDashboard--charter">
+        <!-- add class "uploadedDoc" if documents have already been uploaded -->
+        <form class="form form--availability js-availabilityForm" action="" data-href="/json/test.json" data-action="charterAvailabilityForm" method="post" onsubmit="return false;">
+            <div class="form__left">
+                <div class="form__labelGroup form__labelGroup--text">
+                    <label class="form__label form__label--select">
+                        <div class="form__caption">Aircraft number</div>
+                        <div class="form__field-wrapper">
+                            <select class="form__select" name="number" id="aircrafts">
+                                <option value="">Choose from list</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Re-routing radius:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-numberOnly" type="text" name="re-routing-radius" id="reroutingRadius" placeholder="Enter number here" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--locations">
+                    <div class="form__label form__label--text js-list-locations" data-type="departure">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__departures" width="21px" height="21px">
+                                    <use xlink:href="#departures"></use>
+                                </svg>
+                            </span><span class="text">Potential departure airports and flights:</span>
+                        </div>
+                        <div class="form__field-wrapper js-wrapper-locations" id="departureLocations">
+                            <label class="js-item-locations">
+                                <div class="form__remove js-remove-locations">
+                                    <svg class="icon__close" width="17px" height="17px">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <input class="form__field js-typeahead" type="text" name="departure" value="" placeholder="Enter here" autocomplete="off">
+                            </label>
+                        </div>
+                        <div class="form__add js-add-locations">
+                            <div class="form__add-caption">Added max number of departure</div>
+                            <div class="form__add-icon">
+                                <svg class="icon__plus" width="44px" height="44px">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__label form__label--text js-list-locations" data-type="arrival">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__arrival" width="21px" height="21px">
+                                    <use xlink:href="#arrival"></use>
+                                </svg>
+                            </span><span class="text">Potential landing airports and locations:</span>
+                        </div>
+                        <div class="form__field-wrapper js-wrapper-locations" id="arrivalLocations">
+                            <label class="js-item-locations">
+                                <div class="form__remove js-remove-locations">
+                                    <svg class="icon__close" width="17px" height="17px">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <input class="form__field js-typeahead" type="text" name="arrival" value="" placeholder="Enter here" autocomplete="off">
+                            </label>
+                        </div>
+                        <div class="form__add js-add-locations">
+                            <div class="form__add-caption">Added max number of landing</div>
+                            <div class="form__add-icon">
+                                <svg class="icon__plus" width="44px" height="44px">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--date">
+                    <div class="form__title">Available dates:</div>
+                    <div class="form__label form__label--date js-list-dates" data-limit="5">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__calendar" width="17px" height="17px">
+                                    <use xlink:href="#calendar"></use>
+                                </svg>
+                            </span><span class="text">From-To:</span>
+                        </div>
+                        <div class="form__field-wrapper js-wrapper-dates">
+                            <label class="js-item-dates">
+                                <div class="form__remove js-remove-dates">
+                                    <svg class="icon__close" width="17px" height="17px">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <input class="form__field js-gmi-datepicker" type="text" name="period" placeholder="click to change" required>
+                            </label>
+                        </div>
+                        <div class="form__add js-add-dates">
+                            <div class="form__add-caption">Added max number of available dates</div>
+                            <div class="form__add-icon">
+                                <svg class="icon__plus" width="44px" height="44px">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--price">
+                    <div class="form__title">Price per hour / hourly rate:</div>
+                    <label class="form__label form__label--price price">
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" id="pricePerHour" name="price-per-hour" placeholder="Enter price here in $" autocomplete="off" required>
+                        </div>
+                    </label>
+                    <label class="form__label form__label--price price">
+                        <div class="form__caption">
+                            <span class="icon">
+                                <svg class="icon__triangle" width="24px" height="24px">
+                                    <use xlink:href="#triangle"></use>
+                                </svg>
+                            </span><span class="text">Minimum acceptable cost per charter trip</span>
+                        </div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" id="minPrice" name="min-acceptable-cost" placeholder="Enter cost here in $" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--13">
+                    <div class="form__label form__label--button">
+                        <div class="spinner">
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                        </div>
+                        <button class="form__button  form__button--submit" type="button" id="saveAvailability">
+                            <span class="text">Save Availability</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--13">
+                    <div class="form__label form__label--button">
+                        <div class="spinner">
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                            <div class="spinner__item"></div>
+                        </div>
+                        <button class="form__button  form__button--submit" type="button" id="removeAvailability">
+                          <span class="text">Remove Availability</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="form__right">
+                <div class="form__labelGroup form__labelGroup--question">
+                    <div class="form__caption">Enable automatic sale of empty legs post - charter booking?</div>
+                    <div class="form__radioGroup">
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="automatic-sale" value="yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="automatic-sale" value="no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--question">
+                    <div class="form__caption">Enable ability for charter purchasers to fund four-leg trips and participate in empty leg sales? **</div>
+                    <div class="form__radioGroup">
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="for-charter-purchasers" value="yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="for-charter-purchasers" value="no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--question">
+                    <div class="form__caption">Enable outright sale[s] of "spaces," or seats?</div>
+                    <div class="form__radioGroup">
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="outright-sale" value="yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="outright-sale" value="no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Maximum number alloved:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field js-numberOnly" type="text" name="max-number-sales" placeholder="Enter number here" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--question">
+                    <div class="form__caption">Enable re-sale[s] of "spaces," or "seats," by charter purchasers? **</div>
+                    <div class="form__radioGroup">
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="re-sale" value="yes"><span class="form__radio-box form__radio-box--yes">Yes</span>
+                        </label>
+                        <label class="form__label form__label--radio">
+                            <input class="form__radio" type="radio" name="re-sale" value="no"><span class="form__radio-box form__radio-box--no">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__labelGroup form__labelGroup--number">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Maximum number of spaces/seats:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="max-seats" placeholder="Enter number here" data-mask="0000" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--number">
+                    <label class="form__label form__label--number">
+                        <div class="form__caption">Minimum number of spaces/seats:</div>
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="min-seats" placeholder="Enter number here" data-mask="0000" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--radio js-radio-price">
+                    <label class="form__label form__label--radio">
+                        <input class="form__radio" type="radio" name="price" value=""><i class="form__radio-icon"></i><span class="form__radio-box">Same price for all spaces/seats:</span>
+                    </label>
+                    <label class="form__label form__label--price price">
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="all-price" placeholder="Enter price in $" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--radio js-radio-price">
+                    <label class="form__label form__label--radio">
+                        <input class="form__radio" type="radio" name="price" value=""><i class="form__radio-icon"></i><span class="form__radio-box">Same price per space/seat:</span>
+                    </label>
+                    <label class="form__label form__label--price price">
+                        <div class="form__field-wrapper">
+                            <input class="form__field" type="text" name="price-per-seat" placeholder="Enter price in $" autocomplete="off" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__labelGroup form__labelGroup--file">
+                    <div class="form__label form__label--file js-file">
+                        <div class="form__caption">Seatind chart:</div>
+                        <label class="form__file">
+                            <div class="form__file-button-wr js-file-button">
+                                <button class="form__file-button" type="button">
+                                    <span class="form__file-button-icon">
+                                        <svg class="icon__cloud" width="23px" height="23px">
+                                            <use xlink:href="#cloud"></use>
+                                        </svg>
+                                    </span><span class="form__file-button-text">Upload</span>
+                                </button>
+                            </div>
+                            <div class="form__file-preview-wr js-file-preview">
+                                <div class="form__file-preview">
+                                    <div class="form__file-preview-remove js-file-remove">
+                                        <svg class="icon__close" width="17px" height="17px">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-icon">
+                                        <svg class="icon__file" width="60px" height="60px">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-caption">
+                                        <div class="form__file-preview-title js-file-caption">Document.docx</div>
+                                        <div class="form__file-preview-size js-file-size">11MB</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="file" name="seatind-chart" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </label>
+                    </div>
+                    <div class="form__label form__label--file js-file">
+                        <div class="form__caption">Specify prices:</div>
+                        <label class="form__file">
+                            <div class="form__file-button-wr js-file-button">
+                                <button class="form__file-button" type="button">
+                                    <span class="form__file-button-icon">
+                                        <svg class="icon__cloud" width="23px" height="23px">
+                                            <use xlink:href="#cloud"></use>
+                                        </svg>
+                                    </span><span class="form__file-button-text">Upload</span>
+                                </button>
+                            </div>
+                            <div class="form__file-preview-wr js-file-preview">
+                                <div class="form__file-preview">
+                                    <div class="form__file-preview-remove js-file-remove">
+                                        <svg class="icon__close" width="17px" height="17px">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-icon">
+                                        <svg class="icon__file" width="60px" height="60px">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="form__file-preview-caption">
+                                        <div class="form__file-preview-title js-file-caption">Document.docx</div>
+                                        <div class="form__file-preview-size js-file-size">5MB</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="file" name="specify-prices" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </label>
+                    </div>
+                    <div class="form__footnote">** Commissions in case of re-sales will be split among re-selling parties (FLYJETS, AIRCRAFT PROVIDER and/or participating FLYER)</div>
+                </div>
+            </div>-->
+        </form>
+    </div>
+</div>

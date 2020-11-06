@@ -1,0 +1,931 @@
+
+
+@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FLYJETS</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link href="/css/main.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H) {
+            	H.className = H.className.replace(/\bno-js\b/, 'js')
+            })(document.documentElement)
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTtMUY96FwdCihu1z3Px4rEZQ6uKabQRU&amp;&amp;language=en" async defer></script>
+    </head>
+
+    <body>
+        <div class="rootBox">
+            <div class="page page--main js-scrollToMap openMap--half openMap--full">
+                <div class="box box--mainBlock">
+                    <div class="box__decor box__decor--1"></div>
+                    <div class="box__decor box__decor--2"></div>
+                    <div class="box__inner">
+                        <div class="mainBlock">
+                            <div class="mainBlock__header">
+                                <div class="mainBlock__slogan">A jet aviation marketplace
+                                    <br>and travel planning system</div>
+                            </div>
+                            <div class="mainBlock__content">
+                                <div class="mainBlock__info mainBlock__info--1">
+                                    <div class="mainBlock__info-title">For
+                                        <br>flyers</div>
+                                    <div class="mainBlock__info-text">Search and book aircraft,
+                                        <br>flights, hotels and more</div>
+                                </div>
+                                <div class="mainBlock__logo js-mainLogo">
+                                    <img src="/img/general/logo.png">
+                                </div>
+                                <div class="mainBlock__info mainBlock__info--2">
+                                    <div class="mainBlock__info-title">For aircraft providers</div>
+                                    <div class="mainBlock__info-text">Upload aircraft and
+                                        <br>availability schedules</div>
+                                </div>
+                            </div>
+                            <div class="mainBlock__button-wr"><a class="mainBlock__button js-popup" href="#loginPopup"><span class="text">Log in</span></a><a class="mainBlock__button mainBlock__button--active js-popup" href="#signUpPopup"><span class="text">Sign up</span></a>
+                            </div>
+                            <div class="mainBlock__contacts">
+                                <div class="mainBlock__contacts-title">Call or email</div><a class="mainBlock__contacts-link" href="tel:+12128455137">+1 (212) 845-5137</a><a class="mainBlock__contacts-link" href="mailto:FLY@flyjets.com">FLY@flyjets.com</a>
+                            </div>
+                            <div class="mainBlock__footer">
+                                <div class="mainBlock__version">in Alpha mode</div>
+                                <div class="mainBlock__link js-clickToMap" data-mobile-text="Click here or swipe for map">Click here or scroll for map</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="box box--header">
+                        <div class="box__inner">
+                            <div class="header">
+                                <div class="header__left"  style="z-index:1;">
+                                    <a class="header__logo goToUserHomePage" href="/app/main">
+                                        <img src="/img/general/logo.png">
+                                    </a>
+                                </div>
+                                <div class="header__center" style="position:absolute; margin-left:auto; margin-right:auto; left:0; right:0;">
+                                    <div class="header__title">About Us</div>
+                                </div>
+                                <div class="header__button">
+                                    <div class="dashboardMenuButton js-dashboard-menu-button"><span class="icon icon--open">
+            <svg class="icon__menu" width="512px" height="512px">
+                <use xlink:href="#menu"></use>
+            </svg>
+        </span><span class="icon icon--close">
+            <svg class="icon__close" width="17px" height="17px">
+                <use xlink:href="#close"></use>
+            </svg>
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__inner">
+                        <div class="box box--infoBlock box--black">
+                            <div class="box__inner">
+                                <div class="infoBlock infoBlock--about">
+                                    <div class="dashboardBlock__sidebar js-customScroll">
+                                        <div class="dashboardBlock__nav">
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="flyerDashboard.html"><span class="dashboardBlock__nav-text">Dashboard</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="profileFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__user2" width="16px" height="16px">
+                <use xlink:href="#user2"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Profile</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="bookingListFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__ticket" width="23px" height="23px">
+                <use xlink:href="#ticket"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Booking list</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="flightsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__distance" width="19px" height="19px">
+                <use xlink:href="#distance"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Flights<br><i>upcoming and history</i></span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="settingsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__locked" width="17px" height="17px">
+                <use xlink:href="#locked"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Settings & security</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="passIdFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__card" width="19px" height="19px">
+                <use xlink:href="#card"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Passenger identification</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="flyRewardsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__giftbox" width="18px" height="18px">
+                <use xlink:href="#giftbox"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">FLY<b>Rewards</b></span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="paymentFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__wallet" width="18px" height="18px">
+                <use xlink:href="#wallet"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Payment information</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="alertsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__alarm" width="17px" height="17px">
+                <use xlink:href="#alarm"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Route alerts</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="messagesFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__message" width="25px" height="25px">
+                <use xlink:href="#message"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Messages</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="requestsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__discuss" width="17px" height="17px">
+                <use xlink:href="#discuss"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Requests</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="auctionsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__auction" width="16px" height="16px">
+                <use xlink:href="#auction"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Auctions bids</span></a>
+                                            </div>
+                                            <div class="dashboardBlock__nav-item"><a class="dashboardBlock__nav-link" draggable="true" ondragstart="return dashboardDragStart(event)" href="seatsFlyerDashboard.html"><span class="dashboardBlock__nav-icon">
+            <svg class="icon__ticket" width="23px" height="23px">
+                <use xlink:href="#ticket"></use>
+            </svg>
+        </span><span class="dashboardBlock__nav-text">Sell seats</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="aboutInfo js-customScroll">
+                                        <div class="aboutInfo__section">
+                                            <div class="aboutInfo__title">About us</div>
+                                            <div class="aboutInfo__content">
+                                                <div class="aboutInfo__content-img">
+                                                    <img src="/img/general/logo.png" alt="logo">
+                                                </div>
+                                                <div class="aboutInfo__content-text js-acc-item-mobile">
+                                                    <div class="aboutInfo__content-text-preview js-acc-preview-mobile">
+                                                        <article>
+                                                            <p><b>FLYJETS (FLY I Corporation) is a New York State Benefit Corporation with the goal of providing access to aviation worldwide.</b> Our primary mission is to connect Flyers and Aircraft Providers.</p>
+                                                            <p>The FLYJETS system is an aviation marketplace, mapping engine and travel planning system. At its core, FLYJETS functions as a marketplace for things that move: the marketplace is an automated,
+                                                                end-to-end solution for charter aircraft and flights. FLYJETS also functions as a full-service, IATA-certified travel agency.</p>
+                                                        </article>
+                                                    </div>
+                                                    <div class="aboutInfo__content-text-full js-acc-content-mobile">
+                                                        <article>
+                                                            <p><b>FLYJETS (FLY I Corporation) is a New York State Benefit Corporation with the goal of providing access to aviation worldwide.</b>
+                                                            </p>
+                                                            <p>The FLYJETS system is an aviation marketplace, mapping engine and travel planning system. At its core, FLYJETS functions as a marketplace for things that move: the marketplace is an automated,
+                                                                end-to-end solution for charter aircraft and flights. FLYJETS also functions as a full-service, IATA-certified travel agency.</p>
+                                                            <p>As a benefit corporation, FLYJETS is committed to <b>doing well by doing good</b>, with all corporate duties and responsibilities directed to both shareholders and stakeholders.</p>
+                                                            <p>In keeping with its mission, FLYJETS has established its FLYGreen Energy Initiative, whereby with each flight booking, FLYJETS offers additional FLYRewards - over and above the amount ordinarily
+                                                                granted with each flight - to those users who elect to offset a part of their trip with carbon offsets, and/or fly with some amount of Sustainable Aviation Fuel (SAF), pending availability.</p>
+                                                            <p>FLYJETS has also established The FLY Foundation, a non-profit with the mission of supporting aviation education, advancement in aviation and radio communication technology, and safe and sustainable
+                                                                flight.</p>
+                                                            <p>We are looking forward to working together with you!</p>
+                                                        </article>
+                                                    </div>
+                                                    <div class="aboutInfo__content-link aboutInfo__content-link--mobile js-acc-title-mobile" data-text="hide about us">read more</div><a class="aboutInfo__content-link aboutInfo__content-link--desktop js-popup" href="#aboutPopup" data-mod="white-popup out-close">read more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="aboutInfo__section">
+                                            <div class="aboutInfo__title">Team</div>
+                                            <div class="aboutInfo__subtitle">Click for bios</div>
+                                            <div class="aboutInfo__team">
+                                                <div class="aboutInfo__team-item js-acc-item-mobile js-popup js-popup--desktop" href="#JessicaFisherBio" data-mod="white-popup out-close">
+                                                    <div class="aboutInfo__team-avatar" style="background-image:url('/img/assets/infoBlock/about/Jessica.jpg')">
+                                                        <div class="aboutInfo__team-avatar-back"><span class="text">More</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aboutInfo__team-discription">
+                                                        <div class="aboutInfo__team-name">Jessica Fisher</div>
+                                                        <div class="aboutInfo__team-position">Founder and Chief Executive Officer</div>
+                                                        <div class="aboutInfo__team-bio js-acc-content-mobile">
+                                                            <article>
+                                                                <p>Jessica Fisher is the Founder and Chief Executive Officer of FLYJETS. She is a lifetime aviation enthusiast and began training as a student pilot in 2012.</p>
+                                                                <p>Fisher is also a principal at Monroe Capital, where she focuses on impact investments. Previously, Jessica worked as an associate producer in CNBC’s Strategic Programming and Development
+                                                                    division, as an analyst at MBF Asset Management, as an analyst at Goldman Sachs in the U.S. Equities Sales division and as an M.B.A summer intern at the Robin Hood Foundation.</p>
+                                                                <p>Jessica holds an M.B.A. from Columbia Business School, where the idea for FLYJETS was born as her Introduction to Venturing course project in the summer of 2012. She graduated cum laude with
+                                                                    a B.A. in Economics from the University of Pennsylvania in 2008.</p>
+                                                                <p>Jessica participated as an Engineering Fellow in the Web Development Immersive program at General Assembly in the spring of 2017.</p>
+                                                                <p>Jessica began her private pilot studies and flight lessons at Danny Waizman Flight School in the spring of 2012, and completed her first solo flight in the spring of 2014.</p>
+                                                                <p>Jessica is also an avid runner, a tennis player, and an information and space enthusiast.</p>
+                                                            </article>
+                                                        </div>
+                                                        <div class="aboutInfo__team-link aboutInfo__team-link--mobile js-acc-title-mobile" data-text="hide biography">read more</div>
+                                                    </div>
+                                                </div>
+                                                <div class="aboutInfo__team-item js-acc-item-mobile js-popup js-popup--desktop" href="#BrianCarrollBio" data-mod="white-popup out-close">
+                                                    <div class="aboutInfo__team-avatar" style="background-image:url('/img/assets/infoBlock/about/Brian.jpg')">
+                                                        <div class="aboutInfo__team-avatar-back"><span class="text">More</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aboutInfo__team-discription">
+                                                        <div class="aboutInfo__team-name">Brian Carroll</div>
+                                                        <div class="aboutInfo__team-position">Chief Technology Officer</div>
+                                                        <div class="aboutInfo__team-bio js-acc-content-mobile">
+                                                            <article>
+                                                                <p>Brian Carroll is the Chief Technology Officer of FLYJETS.  A former instructional associate at General Assembly, Brian developed a passion for development upon teaching himself to code in 2017, while he was working in the Environmental Management division of construction management firm LiRo Engineers. </p>
+                                                                <p>In 2016, Brian received his B.A. in Philosophy with a minor in Sociology from The College of Saint Rose.  He enrolled in the Web Development Immersive Program at General Assembly in 2018; shortly after, he began teaching the same course. </p>
+                                                                <p>Brian's preferred technology stack languages include HTML5, CSS3, JavaScript, React, Ruby, Python, C# and ASP.net.</p>
+                                                            </article>
+                                                        </div>
+                                                        <div class="aboutInfo__team-link aboutInfo__team-link--mobile js-acc-title-mobile" data-text="hide biography">read more</div>
+                                                    </div>
+                                                </div>
+                                                <div class="aboutInfo__team-item js-acc-item-mobile js-popup js-popup--desktop" href="#MarinaButovaBio" data-mod="white-popup out-close">
+                                                    <div class="aboutInfo__team-avatar" style="background-image:url('/img/assets/infoBlock/about/Marina.jpg')">
+                                                        <div class="aboutInfo__team-avatar-back"><span class="text">More</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aboutInfo__team-discription">
+                                                        <div class="aboutInfo__team-name">Marina Butova</div>
+                                                        <div class="aboutInfo__team-position">Lead Front-End Developer</div>
+                                                        <div class="aboutInfo__team-bio js-acc-content-mobile">
+                                                            <article>
+                                                                <p>Marina Butova is the Lead Front-End Developer at FLYJETS.</p>
+                                                                <p>Previously, Butova worked as a front-end developer at SAMEDIA web design studio.</p>
+                                                                <p>Marina earned her Bachelor's degree from Rostov State Economic University (RINH), Rostov-na-Donu, in 2015 with concentrations in both Computer Technology and Information Security and Applied
+                                                                    Mathematics and Informatics.</p>
+                                                                <p>Marina speaks both Russian and English, in addition to: JavaScript, Vue, Ajax, jQuery, CSS3 and HTML5, among others!</p>
+                                                                <p>Marina's additional interests include cycling, draw portraits, rock climbing, snowboarding.</p>
+                                                            </article>
+                                                        </div>
+                                                        <div class="aboutInfo__team-link aboutInfo__team-link--mobile js-acc-title-mobile" data-text="hide biography">read more</div>
+                                                    </div>
+                                                </div>
+                                                <div class="aboutInfo__team-item js-acc-item-mobile js-popup js-popup--desktop" href="#YanaUgluntsBio" data-mod="white-popup out-close">
+                                                    <div class="aboutInfo__team-avatar" style="background-image:url('/img/assets/infoBlock/about/Yana.jpg')">
+                                                        <div class="aboutInfo__team-avatar-back"><span class="text">More</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aboutInfo__team-discription">
+                                                        <div class="aboutInfo__team-name">Yana Uglunts</div>
+                                                        <div class="aboutInfo__team-position">Art and Creative Director</div>
+                                                        <div class="aboutInfo__team-bio js-acc-content-mobile">
+                                                            <article>
+                                                                <p>Yana Uglunts is the Art and Creative Director at FLYJETS. Yana also collaborates as an independent contractor with a variety of web studios, helping to develop unique and beautiful user interfaces
+                                                                    and user experiences.</p>
+                                                                <p>Previously, Uglunts held the position of senior user interface and user experience designer at SAMEDIA web design studio. She has also worked as a web designer in various studios including
+                                                                    WEBANT and FIRECODE.</p>
+                                                                <p>In 2017, Yana received her Bachelor's degree and a Diploma with Distinction from Southern Federal University with a direction of innovative technologies. In 2013, she graduated from Lyceum
+                                                                    14 in Stavropol with a Diploma with Distinction and a direction in physics and mathematics.</p>
+                                                                <p>Yana has spent time studying web design independently, performing extensive research of user and consumer marketplaces and identifying problems and solutions associated with websites and
+                                                                    mobile applications. Her goal is to continue to translate business language into design language.</p>
+                                                                <p>Yana speaks both Russian and English. She is also fluent in Figma, Adobe Photoshop, Adobe After Effects and Adobe Illustrator.</p>
+                                                                <p>Yana's additional interests include sports, nutrition, psychology and marketing.</p>
+                                                            </article>
+                                                        </div>
+                                                        <div class="aboutInfo__team-link aboutInfo__team-link--mobile js-acc-title-mobile" data-text="hide biography">read more</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messageCenter js-message-center">
+                        <div class="stub"><span class="stub__icon">
+            <svg class="icon__rotate-phone" width="392px" height="392px">
+                <use xlink:href="#rotate-phone"></use>
+            </svg>
+        </span><span class="stub__text">Please rotate your phone to be vertical</span>
+                        </div>
+                        <div class="messageCenter__bg js-message-center-close"></div>
+                        <div class="messageCenter__header"><span class="text">Message Center</span><span class="icon js-message-center-close">
+            <svg class="icon__close" width="17px" height="17px">
+                <use xlink:href="#close"></use>
+            </svg>
+        </span>
+                        </div>
+                        <div class="messageCenter__inner">
+                            <div class="messageCenter__chat js-customScroll" data-outside>
+                                <div class="messageCenter__chat-item messageCenter__chat-item--inbox">
+                                    <div class="messageCenter__chat-header">
+                                        <div class="messageCenter__chat-avatar" style="background-image:url('/img/assets/dashboardBlock/tabs/world.png')"></div>
+                                        <div class="messageCenter__chat-caption">
+                                            <div class="messageCenter__chat-name">Message center</div>
+                                            <div class="messageCenter__chat-time">3:30 PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="messageCenter__chat-content">
+                                        <div class="messageCenter__chat-text">Welcome to FLYJETS! The messaging feature will be coming soon!</div>
+                                    </div>
+                                </div>
+                                @* <div class="messageCenter__chat-item messageCenter__chat-item--sent">
+                                    <div class="messageCenter__chat-header">
+                                        <div class="messageCenter__chat-avatar" style="background-image:url('/img/content/avatar.jpg')"></div>
+                                        <div class="messageCenter__chat-caption">
+                                            <div class="messageCenter__chat-name">You</div>
+                                            <div class="messageCenter__chat-time">3:50 PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="messageCenter__chat-content">
+                                        <div class="messageCenter__chat-text">Hello!</div>
+                                        <div class="messageCenter__chat-text">Flight exactly take place?</div>
+                                    </div>
+                                </div>
+                                <div class="messageCenter__chat-item messageCenter__chat-item--inbox">
+                                    <div class="messageCenter__chat-header">
+                                        <div class="messageCenter__chat-avatar" style="background-image:url('/img/assets/dashboardBlock/tabs/world.png')"></div>
+                                        <div class="messageCenter__chat-caption">
+                                            <div class="messageCenter__chat-name">Message center</div>
+                                            <div class="messageCenter__chat-time">4:00 PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="messageCenter__chat-content">
+                                        <div class="messageCenter__chat-text">Yes, of course!</div>
+                                        <div class="messageCenter__chat-text">Flight exactly take place?</div>
+                                    </div>
+                                </div>
+                                <div class="messageCenter__chat-item messageCenter__chat-item--sent">
+                                    <div class="messageCenter__chat-header">
+                                        <div class="messageCenter__chat-avatar" style="background-image:url('/img/content/avatar.jpg')"></div>
+                                        <div class="messageCenter__chat-caption">
+                                            <div class="messageCenter__chat-name">You</div>
+                                            <div class="messageCenter__chat-time">3:50 PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="messageCenter__chat-content">
+                                        <div class="messageCenter__chat-text">Flight exactly take place?</div>
+                                    </div>
+                                </div>
+                                <div class="messageCenter__chat-item messageCenter__chat-item--inbox">
+                                    <div class="messageCenter__chat-header">
+                                        <div class="messageCenter__chat-avatar" style="background-image:url('/img/assets/dashboardBlock/tabs/world.png')"></div>
+                                        <div class="messageCenter__chat-caption">
+                                            <div class="messageCenter__chat-name">Message center</div>
+                                            <div class="messageCenter__chat-time">4:00 PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="messageCenter__chat-content">
+                                        <div class="messageCenter__chat-text">Yes, of course!</div>
+                                    </div>
+                                </div> *@
+                            </div>
+                            <div class="messageCenter__form">
+                                <form class="form form--messageCenter" action="" method="post" data-href="/" data-action="messageCenter" id="messageCenterForm" onsubmit="return false;">
+                                    <label class="form__label form__label--text">
+                                        <div class="form__field-wrapper">
+                                            <textarea class="form__field" type="textarea" name="message" placeholder="Write a message..." autocomplete="off" required></textarea>
+                                        </div>
+                                    </label>
+                                    <div class="form__label form__label--button">
+                                        <button class="form__button" type="submit">
+                                            <svg class="icon__send-button" width="27px" height="27px">
+                                                <use xlink:href="#send-button"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box--footer">
+                        <div class="box__inner">
+                            <div class="footer">
+                                <div class="footer__social">
+                                    <div class="social">
+                                        <a class="social__item" href="#">
+                                            <svg class="icon__inst" width="31px" height="31px">
+                                                <use xlink:href="#inst"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="social__item" href="#">
+                                            <svg class="icon__tw" width="31px" height="31px">
+                                                <use xlink:href="#tw"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="social__item" href="#">
+                                            <svg class="icon__fb" width="31px" height="31px">
+                                                <use xlink:href="#fb"></use>
+                                            </svg>
+                                        </a>
+                                    </div><a class="footer__link" href="startScreenLogIn.html">FlyJets</a>
+                                </div>
+                                <div class="footer__nav">
+                                    <div class="nav">
+                                        <div class="nav__item"><a class="nav__link" href="/app/main">FlyJets</a>
+                                        </div>
+                                        <div class="nav__item nav__item--active"><a class="nav__link" href="/app/About">About us</a>
+                                        </div>
+                                        <div class="nav__item"><a class="nav__link" href="#">Contact</a>
+                                        </div>
+                                        <div class="nav__item"><a class="nav__link" href="/app/Disclaimer">Disclaimer</a>
+                                        </div>
+                                        <div class="nav__item"><a class="nav__link" href="/app/Privacy">Privacy policy</a>
+                                        </div>
+                                        <div class="nav__item"><a class="nav__link" href="/app/Terms">Terms and conditions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer__message">
+                                    <div class="messageCenterButton js-message-center-btn">
+                                        <div class="messageCenterButton-icon">
+                                            <svg class="icon__mail-footer" width="18px" height="18px">
+                                                <use xlink:href="#mail-footer"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="messageCenterButton-text">Message center</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aboutPopup" id="aboutPopup">
+            <div class="aboutPopup__inner">
+                <div class="aboutPopup__img">
+                    <img src="/img/general/logo.png" alt="logo">
+                </div>
+                <div class="aboutPopup__content js-customScroll" data-outside="yes">
+                    <article>
+                        <p><b>FLYJETS (FLY I Corporation) is a New York State Benefit Corporation with the goal of providing access to aviation worldwide.</b>
+                        </p>
+                        <p>The FLYJETS system is an aviation marketplace, mapping engine and travel planning system. At its core, FLYJETS functions as a marketplace for things that move: the marketplace is an automated, end-to-end solution for charter aircraft
+                            and flights. FLYJETS also functions as a full-service, IATA-certified travel agency.</p>
+                        <p>As a benefit corporation, FLYJETS is committed to <b>doing well by doing good</b>, with all corporate duties and responsibilities directed to both shareholders and stakeholders.</p>
+                        <p>In keeping with its mission, FLYJETS has established its FLYGreen Energy Initiative, whereby with each flight booking, FLYJETS offers additional FLYRewards - over and above the amount ordinarily granted with each flight - to those
+                            users who elect to offset a part of their trip with carbon offsets, and/or fly with some amount of Sustainable Aviation Fuel (SAF), pending availability.</p>
+                        <p>FLYJETS has also established The FLY Foundation, a non-profit with the mission of supporting aviation education, advancement in aviation and radio communication technology, and safe and sustainable flight.</p>
+                        <p>We are looking forward to working together with you!</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="teamBioPopup" id="JessicaFisherBio">
+            <div class="teamBioPopup__inner">
+                <div class="teamBioPopup__avatar">
+                    <div class="teamBioPopup__avatar-img" style="background-image:url('/img/assets/infoBlock/about/Jessica.jpg')"></div>
+                </div>
+                <div class="teamBioPopup__header">
+                    <div class="teamBioPopup__name">Jessica Fisher</div>
+                    <div class="teamBioPopup__position">Founder and Chief Executive Officer</div>
+                    <div class="teamBioPopup__wherefrom">New York, USA</div>
+                </div>
+                <div class="teamBioPopup__content js-customScroll" data-outside="yes">
+                    <article>
+                        <p>Jessica Fisher is the Founder and Chief Executive Officer of FLYJETS. She is a lifetime aviation enthusiast and began training as a student pilot in 2012.</p>
+                        <p>Fisher is also a principal at Monroe Capital, where she focuses on impact investments. Previously, Jessica worked as an associate producer in CNBC’s Strategic Programming and Development division, as an analyst at MBF Asset Management,
+                            as an analyst at Goldman Sachs in the U.S. Equities Sales division and as an M.B.A summer intern at the Robin Hood Foundation.</p>
+                        <p>Jessica holds an M.B.A. from Columbia Business School, where the idea for FLYJETS was born as her Introduction to Venturing course project in the summer of 2012. She graduated cum laude with a B.A. in Economics from the University
+                            of Pennsylvania in 2008.</p>
+                        <p>Jessica participated as an Engineering Fellow in the Web Development Immersive program at General Assembly in the spring of 2017.</p>
+                        <p>Jessica began her private pilot studies and flight lessons at Danny Waizman Flight School in the spring of 2012, and completed her first solo flight in the spring of 2014.</p>
+                        <p>Jessica is also an avid runner, a tennis player, and an information and space enthusiast.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="teamBioPopup" id="BrianCarrollBio">
+            <div class="teamBioPopup__inner">
+                <div class="teamBioPopup__avatar">
+                    <div class="teamBioPopup__avatar-img" style="background-image:url('/img/assets/infoBlock/about/Brian.jpg')"></div>
+                </div>
+                <div class="teamBioPopup__header">
+                    <div class="teamBioPopup__name">Brian Carroll</div>
+                    <div class="teamBioPopup__position">Chief Technology Officer</div>
+                    <div class="teamBioPopup__wherefrom">New York, USA</div>
+                </div>
+                <div class="teamBioPopup__content js-customScroll" data-outside="yes">
+                    <article>
+                        <p>Brian Carroll is the Chief Technology Officer at FLYJETS.</p>
+                        <p>A former instructional associate at General Assembly, Brian developed a passion for development upon teaching himself to code in 2017, while he was working in the Environmental division of construction management firm LiRo Engineers. </p>
+                        <p>In 2016, Brian received his B.A. in Philosophy with a minor in Sociology from The College of Saint Rose.  He enrolled in the Web Development Immersive Program at General Assembly in 2018; shortly after, he began teaching the same course. </p>
+                        <p>Brian's preferred technology stack languages include HTML5, CSS3, JavaScript, React, Ruby, Python, C# and ASP.net. </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="teamBioPopup" id="MarinaButovaBio">
+            <div class="teamBioPopup__inner">
+                <div class="teamBioPopup__avatar">
+                    <div class="teamBioPopup__avatar-img" style="background-image:url('/img/assets/infoBlock/about/Marina.jpg')"></div>
+                </div>
+                <div class="teamBioPopup__header">
+                    <div class="teamBioPopup__name">Marina Butova</div>
+                    <div class="teamBioPopup__position">Lead Front-End Developer</div>
+                    <div class="teamBioPopup__wherefrom">Rostov-on-Don, Russia</div>
+                </div>
+                <div class="teamBioPopup__content js-customScroll" data-outside="yes">
+                    <article>
+                        <p>Marina Butova is the Lead Front-End Developer at FLYJETS.</p>
+                        <p>Previously, Butova worked as a front-end developer at SAMEDIA web design studio.</p>
+                        <p>Marina earned her Bachelor's degree from Rostov State Economic University (RINH), Rostov-na-Donu, in 2015 with concentrations in both Computer Technology and Information Security and Applied Mathematics and Informatics.</p>
+                        <p>Marina speaks both Russian and English, in addition to: JavaScript, Vue, Ajax, jQuery, CSS3 and HTML5, among others!</p>
+                        <p>Marina's additional interests include cycling, draw portraits, rock climbing, snowboarding.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="teamBioPopup" id="YanaUgluntsBio">
+            <div class="teamBioPopup__inner">
+                <div class="teamBioPopup__avatar">
+                    <div class="teamBioPopup__avatar-img" style="background-image:url('/img/assets/infoBlock/about/Yana.jpg')"></div>
+                </div>
+                <div class="teamBioPopup__header">
+                    <div class="teamBioPopup__name">Yana Uglunts</div>
+                    <div class="teamBioPopup__position">Art and Creative Director</div>
+                    <div class="teamBioPopup__wherefrom">Rostov-on-Don, Russia</div>
+                </div>
+                <div class="teamBioPopup__content js-customScroll" data-outside="yes">
+                    <article>
+                        <p>Yana Uglunts is the Art and Creative Director at FLYJETS. Yana also collaborates as an independent contractor with a variety of web studios, helping to develop unique and beautiful user interfaces and user experiences.</p>
+                        <p>Previously, Uglunts held the position of senior user interface and user experience designer at SAMEDIA web design studio. She has also worked as a web designer in various studios including WEBANT and FIRECODE.</p>
+                        <p>In 2017, Yana received her Bachelor's degree and a Diploma with Distinction from Southern Federal University with a direction of innovative technologies. In 2013, she graduated from Lyceum 14 in Stavropol with a Diploma with Distinction
+                            and a direction in physics and mathematics.</p>
+                        <p>Yana has spent time studying web design independently, performing extensive research of user and consumer marketplaces and identifying problems and solutions associated with websites and mobile applications. Her goal is to continue
+                            to translate business language into design language.</p>
+                        <p>Yana speaks both Russian and English. She is also fluent in Figma, Adobe Photoshop, Adobe After Effects and Adobe Illustrator.</p>
+                        <p>Yana's additional interests include sports, nutrition, psychology and marketing.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="formPopup" id="loginPopup">
+            <div class="formPopup__inner">
+                <div class="formPopup__left">
+                    <div class="formPopup__decor"></div>
+                </div>
+                <div class="formPopup__right">
+                    <div class="formPopup__subtitle">lets go!</div>
+                    <div class="formPopup__title">Log in</div>
+                    <div class="formPopup__form">
+                        <form class="form form--login js-ajaxForm" action="" method="post" data-href="/json/test.json" data-action="login" id="loginForm" onsubmit="return false;">
+                            <div class="spinner">
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                            </div>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Email</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="email" autocomplete="off" name="email" placeholder="Email address" required>
+                                </div>
+                            </label>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption-wrapper">
+                                    <div class="form__caption">Password</div><a class="form__link form__link--desktop js-popup" href="#forgotPasswordPopup">Forgot?</a>
+                                </div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="password" autocomplete="off" name="password" placeholder="Enter your password" required>
+                                </div><a class="form__link form__link--mobile js-popup" href="#forgotPasswordPopup">Forgot?</a>
+                            </label>
+                            <div class="form__label form__label--button">
+                                <button class="form__button" type="submit"><span class="text">Log in</span>
+                                </button><a class="form__link js-popup" href="#signUpPopup">Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="formPopup" id="forgotPasswordPopup">
+            <div class="formPopup__inner">
+                <div class="formPopup__left"><a class="formPopup__back js-popup" href="#loginPopup"><span class="icon">
+            <svg class="icon__left-arrow" width="24px" height="24px">
+                <use xlink:href="#left-arrow"></use>
+            </svg>
+        </span><span class="text">Back to Log in</span></a>
+                    <div class="formPopup__text">New password we will send you an email</div>
+                    <div class="formPopup__text">Check mail</div>
+                </div>
+                <div class="formPopup__right">
+                    <div class="formPopup__title">Forgot password</div>
+                    <div class="formPopup__form">
+                        <form class="form form--forgotPassword js-ajaxForm" action="" method="post" data-href="/" data-action="forgotPassword" id="forgotPasswordForm" onsubmit="return false;">
+                            <div class="spinner">
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                                <div class="spinner__item"></div>
+                            </div>
+                            <label class="form__label form__label--text">
+                                <div class="form__caption">Email me</div>
+                                <div class="form__field-wrapper">
+                                    <input class="form__field" type="email" name="email" autocomplete="off" placeholder="Email address" required>
+                                </div>
+                            </label>
+                            <div class="formPopup__text-wr">
+                                <div class="formPopup__text">New password we will send you an email</div>
+                                <div class="formPopup__text">Check mail</div>
+                            </div>
+                            <div class="form__label form__label--button">
+                                <button class="form__button" type="submit"><span class="text">Send password</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="formPopup formPopup--signUp" id="signUpPopup">
+            <div class="formPopup__inner">
+                <div class="formPopup__left">
+                    <div class="formPopup__decor"></div>
+                </div>
+                <div class="formPopup__right js-tabBox">
+                    <div class="formPopup__header">
+                        <div class="formPopup__title-wr">
+                            <div class="formPopup__subtitle">Hello!</div>
+                            <div class="formPopup__title">Sign&nbsp;up</div>
+                        </div>
+                        <div class="formPopup__tabNav">
+                            <div class="formPopup__tabNav-item js-tabNavItem" data-id="flyer">Flyer</div>
+                            <div class="formPopup__tabNav-item js-tabNavItem" data-id="aircraftProvider">Aircraft provider</div>
+                        </div>
+                    </div>
+                    <div class="formPopup__tabContent">
+                        <div class="formPopup__tabContent-item js-tabContentItem" data-id="flyer">
+                            <form class="form form--signUpForm js-ajaxForm" action="" method="post" data-href="#" data-action="signUpFlyer" id="signUpFlyerForm" onsubmit="return false;">
+                                <div class="spinner">
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                </div>
+                                <div class="form__labelGroup">
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Name</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="firstname" autocomplete="off" placeholder="First" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="middlename" autocomplete="off" placeholder="Middle" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="lastname" autocomplete="off" placeholder="Last" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Email</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="email" name="email" autocomplete="off" placeholder="Email address" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text phone">
+                                        <div class="form__caption">Phone</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="phone" autocomplete="off" placeholder="+1 (___) ___-__-__" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Password</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="password" name="password" autocomplete="off" placeholder="Enter your password" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Confirm password</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="password" name="confirmPassword" autocomplete="off" placeholder="Enter your password" required>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form__label form__label--button">
+                                    <button class="form__button form__button" type="submit"><span class="text">Complete</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="formPopup__tabContent-item js-tabContentItem" data-id="aircraftProvider">
+                            <form class="form form--signUpForm js-ajaxForm" action="" method="post" data-href="#" data-action="signUpAircraftProvider" id="signUpAircraftProviderForm" onsubmit="return false;">
+                                <div class="spinner">
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                    <div class="spinner__item"></div>
+                                </div>
+                                <div class="form__labelGroup">
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Name</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="firstname" autocomplete="off" placeholder="First" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="middlename" autocomplete="off" placeholder="Middle" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="lastname" autocomplete="off" placeholder="Last" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Company</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="company" autocomplete="off" placeholder="Company name" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text phone">
+                                        <div class="form__caption">Phone</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="text" name="phone" autocomplete="off" placeholder="+1 (___) ___-__-__" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Email</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="email" name="email" autocomplete="off" placeholder="Email address" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Confirm password</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="password" name="confirmPassword" autocomplete="off" placeholder="Enter your password" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__caption">Password</div>
+                                        <div class="form__field-wrapper">
+                                            <input class="form__field" type="password" name="password" autocomplete="off" placeholder="Enter your password" required>
+                                        </div>
+                                    </label>
+                                    <label class="form__label form__label--text">
+                                        <div class="form__info">Message that FlyJets are checking providers. Here you can specify how many days it will take</div>
+                                    </label>
+                                </div>
+                                <div class="form__label form__label--button">
+                                    <button class="form__button" type="submit"><span class="text">Complete</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            var BrowserDetect = {
+            	init: function () {
+            		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+            		this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+            		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+            	},
+            	searchString: function (data) {
+            		for (var i=0; i<data.length; i++) {
+            
+            			var dataString = data[i].string;
+            			var dataProp = data[i].prop;
+            
+            			this.versionSearchString = data[i].versionSearch || data[i].identity;
+            
+            			if (dataString) {
+            				if (dataString.indexOf(data[i].subString) != -1)
+            				return data[i].identity;
+            			} else if (dataProp)
+            
+            			return data[i].identity;
+            		}
+            	},
+            	searchVersion: function (dataString) {
+            		var index = dataString.indexOf(this.versionSearchString);
+            
+            		if (index == -1) return;
+            
+            		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+            	},
+            	dataBrowser: [{
+            		string: navigator.userAgent,
+            		subString: "Chrome",
+            		identity: "Chrome"
+            	},{
+            		string: navigator.userAgent,
+            		subString: "OmniWeb",
+            		versionSearch: "OmniWeb/",
+            		identity: "OmniWeb"
+            	},{
+            		string: navigator.vendor,
+            		subString: "Apple",
+            		identity: "Safari",
+            		versionSearch: "Version"
+            	},{
+            		prop: window.opera,
+            		identity: "Opera",
+            		versionSearch: "Version"
+            	},{
+            		string: navigator.vendor,
+            		subString: "iCab",
+            		identity: "iCab"
+            	},{
+            		string: navigator.vendor,
+            		subString: "KDE",
+            		identity: "Konqueror"
+            	},{
+            		string: navigator.userAgent,
+            		subString: "Firefox",
+            		identity: "Firefox"
+            	},{
+            		string: navigator.vendor,
+            		subString: "Camino",
+            		identity: "Camino"
+            	},{
+            		/* For Newer Netscapes (6+) */
+            		string: navigator.userAgent,
+            		subString: "Netscape",
+            		identity: "Netscape"
+            	},{
+            		string: navigator.userAgent,
+            		subString: "MSIE",
+            		identity: "Internet Explorer",
+            		versionSearch: "MSIE"
+            	},{
+            		string: navigator.userAgent,
+            		subString: "Gecko",
+            		identity: "Mozilla",
+            		versionSearch: "rv"
+            	},{
+            		/* For Older Netscapes (4-) */
+            		string: navigator.userAgent,
+            		subString: "Mozilla",
+            		identity: "Netscape",
+            		versionSearch: "Mozilla"
+            	}],
+            	dataOS : [{
+            		string: navigator.platform,
+            		subString: "Win",
+            		identity: "Windows"
+            	},{
+            		string: navigator.platform,
+            		subString: "Mac",
+            		identity: "Mac"
+            	},{
+            		string: navigator.userAgent,
+            		subString: "iPhone",
+            		identity: "iPhone/iPod"
+            	},{
+            		string: navigator.platform,
+            		subString: "Linux",
+            		identity: "Linux"
+            	}]
+            };
+            
+            BrowserDetect.init();
+            
+            //- console.log(BrowserDetect.browser);
+            //- console.log(BrowserDetect.version);
+            //- console.log(innerHTML=BrowserDetect.OS);
+            
+            if (BrowserDetect.browser == 'Safari') document.getElementsByTagName('html')[0].classList.add('safari');
+            if (BrowserDetect.browser == 'Firefox') document.getElementsByTagName('html')[0].classList.add('firefox');
+            
+            var isEdge = /edge\/(\d+(\.\d+)?)/i.test(navigator.userAgent);
+            if (isEdge) document.getElementsByTagName('html')[0].classList.add('edge');
+        </script>
+        <script src="/js/separate-js/jquery-3.2.1.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,256 @@
+﻿<div class="dashboardBlock__content js-customScroll" ondragenter="return dashboardDragEnter(event)" ondrop="return dashboardDragDrop(event)" ondragover="return dashboardDragOver(event)">
+    <div class="profileDashboard profileDashboard--flyer">
+        <div class="profileDashboard__left">
+            <form class="form profileDashboard__form-info emptyImg js-profileForm" action="" method="post" id="flyerProfileForm" onsubmit="return false;">
+                <div class="profileDashboard__section">
+                    <div class="profileDashboard__header">
+                        <div class="profileDashboard__title">Personal information</div>
+                        <div class="profileDashboard__change js-editForm">Change info</div>
+                        <button class="profileDashboard__button js-submitForm" type="button" id="saveProfile">
+                            <span class="text">Save</span>
+                        </button>
+                    </div>
+                    <div class="profileDashboard__content">
+                        <div class="profileDashboard__upload">
+                            <div class="profileDashboard__avatar empty js-avatar">
+                                <label>
+                                    <input class="js-avatar-edit" type="file" name="upload-avatar" accept="image/*" value="">
+                                    <div class="profileDashboard__avatar-img js-avatar-img">
+                                        <span class="profileDashboard__avatar-icon">
+                                            <svg class="icon__photo-camera" width="18px" height="18px">
+                                                <use xlink:href="#photo-camera"></use>
+                                            </svg>
+                                        </span><span class="profileDashboard__avatar-caption">Upload photo</span>
+                                    </div>
+                                    <div class="profileDashboard__avatar-change">Change photo</div>
+                                </label>
+                                <div class="profileDashboard__avatar-crop js-avatar-crop">
+                                    <button class="profileDashboard__avatar-button" type="button">
+                                        <div class="text">Crop photo</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profileDashboard__personal-info">
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">First Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="firstName" id="firstName" placeholder="enter first name*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Middle Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="middleName" id="middleName" placeholder="enter name" value="">
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Last Name:</div>
+                                <input class="profileDashboard__personal-info-field" type="text" name="lastName" id="lastName" placeholder="enter last name*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Birth:</div>
+                                <input class="profileDashboard__personal-info-field js-datepicker" type="text" name="dateOfBirth" id="dateOfBirth" placeholder="enter date*" value="" autocomplete="off" readonly required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Email:</div>
+                                <input class="profileDashboard__personal-info-field" type="email" name="email" id="email" placeholder="enter email*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Phone:</div>
+                                <input class="profileDashboard__personal-info-field phone" type="text" name="mobile" id="mobile" placeholder="enter phone*" value="" required>
+                            </label>
+                            <label class="profileDashboard__personal-info-item">
+                                <div class="profileDashboard__personal-info-caption">Address:</div>
+                                <textarea class="profileDashboard__personal-info-field" type="textarea" name="address" id="address" placeholder="enter address*" required></textarea>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="profileDashboard__section">
+                    <div class="profileDashboard__title">Additional Information</div>
+                    <div class="profileDashboard__content">
+                        <div class="profileDashboard__add-info">
+                            <label class="profileDashboard__add-info-item">
+                                <div class="profileDashboard__add-info-caption">Company name:</div>
+                                <input class="profileDashboard__add-info-field" type="text" name="companyName" id="companyName" placeholder="enter company" value="">
+                            </label>
+                            <label class="profileDashboard__add-info-item">
+                                <div class="profileDashboard__add-info-caption">Company address:</div>
+                                <input class="profileDashboard__add-info-field" type="text" name="companyAddress" id="companyAddress" placeholder="enter address">
+                            </label>
+                            <label class="profileDashboard__add-info-item">
+                                <div class="profileDashboard__add-info-caption">Company email:</div>
+                                <input class="profileDashboard__add-info-field" type="email" name="companyEmail" id="companyEmail" placeholder="enter email">
+                            </label>
+                            <label class="profileDashboard__add-info-item">
+                                <div class="profileDashboard__add-info-caption">Company phone:</div>
+                                <input class="profileDashboard__add-info-field phone" type="text" name="companyPhone" id="companyPhone" placeholder="enter phone">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="profileDashboard__right">
+            <div class="profileDashboard__section">
+                <div class="profileDashboard__title">Family members</div>
+                <div class="profileDashboard__content">
+                    <div class="profileDashboard__add-members">
+                        <div class="profileDashboard__add-members-tabs js-tabBox">
+                            <div class="profileDashboard__add-members-tabs-nav">
+                                <div class="profileDashboard__add-members-tabs-nav-item js-tabNavItem" data-id="FlyJets-member">FlyJets member</div>
+                                <!--<div class="profileDashboard__add-members-tabs-nav-item js-tabNavItem" data-id="Invite-by-email">Invite by email</div>-->
+                            </div>
+                            <div class="profileDashboard__add-members-tabs-content">
+                                <div class="profileDashboard__add-members-tabs-content-item js-tabContentItem" data-id="FlyJets-member">
+                                    <!-- add form class "error" for show form__field-error -->
+                                    <!-- add form class "success" for show form__field-success -->
+                                    <form class="form form--addMembers js-ajaxForm" action="" method="post" data-href="/json/test.json" data-action="addMember" id="addMemberForm" onsubmit="return false;">
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="email" name="email" placeholder="Type there..." autocomplete="off" required><span class="form__field-error">
+                                                    <svg class="icon__warning" width="20px" height="20px">
+                                                        <use xlink:href="#warning"></use>
+                                                    </svg>
+                                                    not found!
+                                                </span><span class="form__field-success">
+                                                    <svg class="icon__checked-green" width="21px" height="21px">
+                                                        <use xlink:href="#checked-green"></use>
+                                                    </svg>
+                                                    found!
+                                                </span>
+                                            </div>
+                                        </label>
+                                        <div class="form__label form__label--button">
+                                            <div class="spinner">
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                            </div>
+                                            <button class="form__button" type="submit">
+                                                <span class="text">Add</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="profileDashboard__add-members-tabs-content-item js-tabContentItem" data-id="Invite-by-email">
+                                    <form class="form form--addMembers js-ajaxForm" action="" method="post" data-href="/json/test.json" data-action="inviteMember" id="inviteMemberForm" onsubmit="return false;">
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <input class="form__field" type="email" name="email" placeholder="Type there..." autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <div class="form__label form__label--button">
+                                            <div class="spinner">
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                                <div class="spinner__item"></div>
+                                            </div>
+                                            <button class="form__button" type="submit">
+                                                <span class="text">Add</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profileDashboard__add-members-input js-acc-item">
+                            <div class="profileDashboard__add-members-input-header js-acc-title">
+                                <div class="profileDashboard__add-members-input-header-text">
+                                    Or&nbsp;<b>input name and info him/herself</b>
+                                </div>
+                                <div class="profileDashboard__add-members-input-header-icon">
+                                    <svg class="icon__down-arrow" width="33px" height="33px">
+                                        <use xlink:href="#down-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="profileDashboard__add-members-input-content js-acc-content">
+                                <div class="profileDashboard__add-members-input-form">
+                                    <form class="form form--inputMembers js-ajaxForm" action="" method="post" data-href="/json/test.json" data-action="inputMember" id="inputMemberForm" onsubmit="return false;">
+                                        <div class="spinner">
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                            <div class="spinner__item"></div>
+                                        </div>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">First Name:</div>
+                                                <input class="form__field" type="text" name="firstName" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Last Name:</div>
+                                                <input class="form__field" type="text" name="lastName" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--date">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Date of birth:</div>
+                                                <input class="form__field js-datepicker" type="text" name="dateOfBirth" placeholder="" autocomplete="off" readonly required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Mobile:</div>
+                                                <input class="form__field" type="text" name="mobile" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--text">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Email:</div>
+                                                <input class="form__field" type="text" name="email" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <label class="form__label form__label--address">
+                                            <div class="form__field-wrapper">
+                                                <div class="form__caption">Address:</div>
+                                                <input class="form__field" type="text" name="address" placeholder="" autocomplete="off" required>
+                                            </div>
+                                        </label>
+                                        <div class="form__label form__label--button">
+                                            <button class="form__button" type="button" id="addMember">
+                                                <span class="icon">
+                                                    <svg class="icon__cloud" width="23px" height="23px">
+                                                        <use xlink:href="#cloud"></use>
+                                                    </svg>
+                                                </span><span class="text">Add</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--<div class="profileDashboard__add-members-input-decor">
+                                    <svg class="icon__plus" width="44px" height="44px">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profileDashboard__section">
+                <div class="profileDashboard__title">Added members</div>
+                <div class="profileDashboard__content">
+                    <div class="profileDashboard__members">
+                        <div class="profileDashboard__members-empty js-members-empty">no members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
